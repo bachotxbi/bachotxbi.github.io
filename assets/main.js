@@ -66,7 +66,10 @@
         renderPubs(merged);
         $("pubsNote").innerHTML = `Updated automatically from <a href="https://orcid.org/${esc(S.orcid)}" target="_blank" rel="noopener">ORCID</a>.`;
       })
-      .catch(() => renderPubs(manual));
+      .catch(() => {
+        if (manual.length) renderPubs(manual);
+        else $("pubs").innerHTML = placeholder(`See my publications on <a href="https://orcid.org/${esc(S.orcid)}" target="_blank" rel="noopener">ORCID</a>.`);
+      });
   } else if (manual.length) {
     renderPubs(manual);
   } else {
@@ -125,9 +128,23 @@
   const L = Object.assign({}, S.links || {});
   if (S.orcid && !L.orcid) L.orcid = `https://orcid.org/${S.orcid}`;
   if (S.instagramHandle && !L.instagram) L.instagram = `https://instagram.com/${S.instagramHandle}`;
-  const labels = { orcid: "ORCID", scholar: "Google Scholar", researchgate: "ResearchGate", linkedin: "LinkedIn", github: "GitHub", youtube: "YouTube", instagram: "Instagram" };
-  $("social").innerHTML = Object.entries(L).filter(([, u]) => u)
-    .map(([k, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${labels[k] || esc(k)}</a></li>`).join("");
+  const labels = { orcid: "ORCID", scholar: "Google Scholar", researchgate: "ResearchGate", linkedin: "LinkedIn", github: "GitHub", youtube: "YouTube", instagram: "Instagram", email: "Email" };
+  const ICONS = {
+    orcid: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg>`,
+    researchgate: `<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="#00ccbb"/><text x="11" y="16.5" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">R</text><text x="17.2" y="11" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#fff">G</text></svg>`,
+    scholar: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 9l11 7 9-5.7V17h2V9z"/><path d="M5 13.2V17c0 1.7 3.1 4 7 4s7-2.3 7-4v-3.8l-7 4.4z"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0"/></svg>`,
+    github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>`,
+    youtube: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8M9.6 15.6V8.4l6.2 3.6z"/></svg>`,
+    instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>`,
+    email: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4.5" width="20" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>`
+  };
+  const linkList = Object.entries(L).filter(([, u]) => u);
+  if (S.email) linkList.push(["email", `mailto:${S.email}`]);
+  const iconLink = ([k, u]) => `<li><a href="${esc(u)}" ${k === "email" ? "" : 'target="_blank" rel="noopener"'} title="${labels[k] || esc(k)}" aria-label="${labels[k] || esc(k)}">${ICONS[k] || esc(labels[k] || k)}</a></li>`;
+  $("navIcons").innerHTML = linkList.map(iconLink).join("");
+  $("social").innerHTML = linkList.filter(([k]) => k !== "email")
+    .map(([k, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><span class="ico">${ICONS[k] || ""}</span>${labels[k] || esc(k)}</a></li>`).join("");
 
   // ---- Nav + reveal ----
   const nav = $("nav");

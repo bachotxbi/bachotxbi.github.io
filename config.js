@@ -5,7 +5,7 @@
 
 window.SITE = {
   // --- Identidad -------------------------------------------------------
-  name: "Your Name",
+  name: "Xavier Bachot Iglesias",
   tagline: "Marine Ecologist · Underwater Videographer",
   location: "Canary Islands, Spain",
   heroPhoto: "",            // ej. "images/hero.jpg" (foto submarina horizontal)
@@ -22,7 +22,7 @@ window.SITE = {
   researchInterests: ["Marine ecology", "Macroalgae", "Coastal ecosystems", "Underwater imaging"],
 
   // Si pones tu ORCID, las publicaciones se cargan solas desde ORCID.
-  orcid: "",                // ej. "0000-0002-1825-0097"
+  orcid: "0009-0006-6342-0274",
   // Publicaciones a mano (se usan si no hay ORCID o como complemento):
   publications: [
     // { year: 2025, title: "Title of the paper", authors: "Surname A, Surname B", journal: "Journal", doi: "10.xxxx/xxxxx" },
@@ -49,11 +49,12 @@ window.SITE = {
 
   // --- Contacto --------------------------------------------------------
   email: "",                // el email que quieras que se vea en la web
+  // Aparecen como iconos arriba a la derecha y en Contacto (vacío = oculto)
   links: {
-    orcid: "",
+    orcid: "https://orcid.org/0009-0006-6342-0274",
     scholar: "",
-    researchgate: "",
-    linkedin: "",
+    researchgate: "https://www.researchgate.net/profile/Xavier-Bachot-2",
+    linkedin: "https://www.linkedin.com/in/xavier-bachot-iglesias-33b230161",
     github: "https://github.com/bachotxbi",
     youtube: "",
     instagram: ""
