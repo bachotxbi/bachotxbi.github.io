@@ -73,7 +73,7 @@ window.SITE = {
       tag: "Photography",
       title: "Winner — Marine Life category, 5th Photography Contest",
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
-      text: "My photograph “El misterio de Las Canteras”, an octopus peeking out from a dense meadow of green algae at Las Canteras beach (Gran Canaria), won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
+      text: "My photograph “El misterio de Las Canteras”, a white-spotted octopus (*Octopus macropus*) peeking out from a dense meadow of green algae at Las Canteras beach (Gran Canaria), won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
       image: "images/misterio-de-las-canteras.jpg",
       imageCaption: "“El misterio de Las Canteras”",
       links: [
