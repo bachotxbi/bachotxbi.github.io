@@ -47,8 +47,12 @@ window.SITE = {
       title: "Winner — Marine Life category, 6th Photography Contest",
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph of a common cuttlefish (*Sepia officinalis*) won the Marine Life category in the 6th edition of the Faculty of Marine Sciences photography contest.",
-      image: "",            // ej. "images/sepia-officinalis.jpg"
-      links: []
+      image: "images/vi-concurso-ganadores.jpg",   // cambiar por la foto de la sepia cuando llegue
+      imageCaption: "Winners of the 6th Photography Contest",
+      links: [
+        { label: "Contest announcement (ULPGC Library)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
+      ],
+      gallery: ["images/vi-concurso-ganadores-full.jpg"]
     },
     {
       date: "2023-12-04",

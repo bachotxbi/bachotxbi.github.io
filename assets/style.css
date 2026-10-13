@@ -202,7 +202,8 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .card-more summary { cursor: pointer; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
 .card-more[open] summary { margin-bottom: 14px; }
 .card-more .card-video { border-radius: 8px; overflow: hidden; }
-.card-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.card-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.card-gallery a:only-child img { aspect-ratio: auto; }
 .card-gallery img { aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; }
 
 /* (legacy timeline) */
