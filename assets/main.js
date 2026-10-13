@@ -108,7 +108,7 @@
     const yt = (id, title) => `<div class="card-video"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0" title="${esc(title)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
     const card = (a) => {
       let media;
-      if (a.image) media = `<figure class="card-media"><img src="${esc(a.image)}" alt="${esc(a.imageCaption || a.title)}" loading="lazy">${a.imageCaption ? `<figcaption>${esc(a.imageCaption)}</figcaption>` : ""}</figure>`;
+      if (a.image) media = `<figure class="card-media"><img src="${esc(a.image)}" alt="${esc(String(a.imageCaption || a.title).replace(/\*/g, ""))}" loading="lazy">${a.imageCaption ? `<figcaption>${rich(a.imageCaption)}</figcaption>` : ""}</figure>`;
       else if (a.video) media = yt(a.video, a.title);
       else media = `<div class="card-media card-media-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2l1.5-2h6l1.5 2h2A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.8"/></svg></div>`;
       const extras = [];
