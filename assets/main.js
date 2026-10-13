@@ -89,7 +89,7 @@
     const uploads = "UU" + S.youtubeChannelId.slice(2);
     const channelUrl = S.youtubeHandle ? `https://www.youtube.com/${S.youtubeHandle}` : `https://www.youtube.com/channel/${S.youtubeChannelId}`;
     $("channel").innerHTML = `
-      <h3 class="muted" style="font-family:Inter;font-weight:500;font-size:1rem;margin-bottom:14px">Latest uploads</h3>
+      <h3 class="sub-h">Latest on YouTube</h3>
       <div class="channel-frame reveal"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=${uploads}" title="Latest videos" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
       <div class="channel-actions"><a class="btn btn-light" href="${esc(channelUrl)}" target="_blank" rel="noopener">See the full channel</a></div>`;
   } else if (!feat.length) {
@@ -117,10 +117,10 @@
     s.type = "module"; s.src = "https://w.behold.so/widget.js";
     document.head.appendChild(s);
   } else {
-    $("igFeed").innerHTML = placeholder("Your latest Instagram posts will appear here once the feed widget is connected.");
+    $("instagram").remove();   // sin widget: basta con el botón de Instagram
   }
-  if (S.instagramHandle) {
-    $("igTitle").innerHTML = `Latest from <a href="https://instagram.com/${esc(S.instagramHandle)}" target="_blank" rel="noopener">@${esc(S.instagramHandle)}</a>`;
+  if (S.instagramHandle && $("igTitle")) {
+    $("igTitle").innerHTML = `On Instagram · <a href="https://instagram.com/${esc(S.instagramHandle)}" target="_blank" rel="noopener">@${esc(S.instagramHandle)}</a>`;
   }
 
   // ---- Contact ----
@@ -128,7 +128,10 @@
   const L = Object.assign({}, S.links || {});
   if (S.orcid && !L.orcid) L.orcid = `https://orcid.org/${S.orcid}`;
   if (S.instagramHandle && !L.instagram) L.instagram = `https://instagram.com/${S.instagramHandle}`;
-  const labels = { orcid: "ORCID", scholar: "Google Scholar", researchgate: "ResearchGate", linkedin: "LinkedIn", github: "GitHub", youtube: "YouTube", instagram: "Instagram", email: "Email" };
+  if (S.youtubeHandle && !L.youtube) L.youtube = `https://www.youtube.com/${S.youtubeHandle}`;
+  const labels = { orcid: "ORCID", scholar: "Google Scholar", researchgate: "ResearchGate", linkedin: "LinkedIn", github: "GitHub", youtube: "YouTube", instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", vimeo: "Vimeo", email: "Email" };
+  const RESEARCH_KEYS = ["orcid", "scholar", "researchgate", "linkedin", "github"];
+  const FILM_KEYS = ["youtube", "instagram", "facebook", "tiktok", "vimeo"];
   const ICONS = {
     orcid: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#a6ce39"/><text x="12" y="16.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#fff">iD</text></svg>`,
     researchgate: `<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="4" fill="#00ccbb"/><text x="11" y="16.5" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">R</text><text x="17.2" y="11" text-anchor="middle" font-family="Georgia,serif" font-size="7" fill="#fff">G</text></svg>`,
@@ -137,14 +140,20 @@
     github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>`,
     youtube: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8M9.6 15.6V8.4l6.2 3.6z"/></svg>`,
     instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg>`,
+    facebook: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12"/></svg>`,
+    tiktok: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 0h4a5.5 5.5 0 0 0 5 5v4a9.4 9.4 0 0 1-5-1.6V15a7 7 0 1 1-7-7h.5v4a3 3 0 1 0 2.5 3z"/></svg>`,
+    vimeo: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.98 6.4c-.1 2.3-1.7 5.5-4.8 9.5-3.2 4.2-5.9 6.3-8.1 6.3-1.4 0-2.5-1.3-3.4-3.8L5.8 11.5C5.1 9 4.4 7.7 3.7 7.7c-.2 0-.8.4-1.8 1.1L.8 7.4l3.4-3c1.5-1.3 2.7-2 3.4-2.1 1.8-.2 2.9 1 3.3 3.7.5 2.9.8 4.6.9 5.3.5 2.4 1.1 3.6 1.7 3.6.5 0 1.2-.8 2.2-2.3 1-1.5 1.5-2.7 1.6-3.5.1-1.3-.4-2-1.6-2-.5 0-1.1.1-1.7.4 1.1-3.7 3.3-5.5 6.5-5.4 2.4.1 3.5 1.6 3.4 4.4"/></svg>`,
     email: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4.5" width="20" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>`
   };
   const linkList = Object.entries(L).filter(([, u]) => u);
   if (S.email) linkList.push(["email", `mailto:${S.email}`]);
   const iconLink = ([k, u]) => `<li><a href="${esc(u)}" ${k === "email" ? "" : 'target="_blank" rel="noopener"'} title="${labels[k] || esc(k)}" aria-label="${labels[k] || esc(k)}">${ICONS[k] || esc(labels[k] || k)}</a></li>`;
   $("navIcons").innerHTML = linkList.map(iconLink).join("");
-  $("social").innerHTML = linkList.filter(([k]) => k !== "email")
-    .map(([k, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><span class="ico">${ICONS[k] || ""}</span>${labels[k] || esc(k)}</a></li>`).join("");
+  const pill = ([k, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><span class="ico">${ICONS[k] || ""}</span>${labels[k] || esc(k)}</a></li>`;
+  const pillsFor = (keys) => keys.filter((k) => L[k]).map((k) => pill([k, L[k]])).join("");
+  $("social").innerHTML = linkList.filter(([k]) => k !== "email").map(pill).join("");
+  $("researchLinks").innerHTML = pillsFor(RESEARCH_KEYS);
+  $("filmLinks").innerHTML = pillsFor(FILM_KEYS);
 
   // ---- Nav + reveal ----
   const nav = $("nav");

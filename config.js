@@ -49,14 +49,20 @@ window.SITE = {
 
   // --- Contacto --------------------------------------------------------
   email: "",                // el email que quieras que se vea en la web
-  // Aparecen como iconos arriba a la derecha y en Contacto (vacío = oculto)
+  // Aparecen como iconos arriba a la derecha, en Contacto y en su sección
+  // (Research o Film). Vacío = oculto.
   links: {
+    // → sección Research
     orcid: "https://orcid.org/0009-0006-6342-0274",
     scholar: "",
     researchgate: "https://www.researchgate.net/profile/Xavier-Bachot-2",
     linkedin: "https://www.linkedin.com/in/xavier-bachot-iglesias-33b230161",
     github: "https://github.com/bachotxbi",
+    // → sección Film
     youtube: "",
-    instagram: ""
+    instagram: "",
+    facebook: "",
+    tiktok: "",
+    vimeo: ""
   }
 };
