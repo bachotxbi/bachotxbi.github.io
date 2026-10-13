@@ -38,8 +38,41 @@ window.SITE = {
   ],
 
   // --- Concursos y reconocimientos --------------------------------------
+  // Tarjetas tipo blog. Campos: date (AAAA-MM-DD), tag, title, org, text,
+  // (*texto* = cursiva), image (foto de portada), video (ID de YouTube), links [{label, url}], gallery [fotos]
   awards: [
-    // { year: 2024, title: "Finalist", event: "Underwater film festival", link: "" },
+    {
+      date: "2024-06-01",
+      tag: "Photography",
+      title: "Winner — Marine Life category, 6th Photography Contest",
+      org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
+      text: "My photograph of a common cuttlefish (*Sepia officinalis*) won the Marine Life category in the 6th edition of the Faculty of Marine Sciences photography contest.",
+      image: "",            // ej. "images/sepia-officinalis.jpg"
+      links: []
+    },
+    {
+      date: "2023-12-04",
+      tag: "Entrepreneurship",
+      title: "Finalist — Impulsa Talento Awards, Blue Economy, with the project “Kalima”",
+      org: "ULPGC Vice-Rectorate for Students, Alumni and Employability · DISA Foundation · Banco Santander · Canary Islands Maritime Cluster",
+      text: "Kalima was recognised as a finalist in the Blue Economy category of the 2023 Impulsa Talento Awards, which support entrepreneurial ideas from the university community aligned with the Sustainable Development Goals.",
+      image: "images/impulsa-talento-finalistas.jpg",
+      imageCaption: "Finalists of the 2023 Impulsa Talento Awards",
+      video: "umeWxe1g6Hg",
+      links: [
+        { label: "ULPGC news", url: "https://www10.ulpgc.es/noticia/2023/12/04/ulpgc-premia-seis-iniciativas-emprendedoras-universitarios-relacionadas-ods" },
+        { label: "Project video", url: "https://www.youtube.com/watch?v=umeWxe1g6Hg" }
+      ]
+    },
+    {
+      date: "2023-06-01",
+      tag: "Photography",
+      title: "Winner — Marine Life category, 5th Photography Contest",
+      org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
+      text: "My photograph “El misterio de Las Canteras” won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
+      image: "",            // ej. "images/misterio-canteras.jpg"
+      links: []
+    }
   ],
 
   // --- Instagram -------------------------------------------------------

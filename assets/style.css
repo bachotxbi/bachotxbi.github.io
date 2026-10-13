@@ -162,7 +162,50 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .channel-frame iframe { width: 100%; height: 100%; border: 0; }
 .channel-actions { margin-top: 22px; }
 
-/* ---------- Awards ---------- */
+/* ---------- Awards (blog cards) ---------- */
+.year-group + .year-group { margin-top: 56px; }
+.year-h {
+  font-size: 1.6rem; font-weight: 500; color: var(--mid);
+  padding-bottom: 12px; margin-bottom: 26px; border-bottom: 1px solid #d6e0e0;
+}
+.award-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; align-items: start; }
+.award-card {
+  background: #fff; border-radius: var(--radius); overflow: hidden;
+  border-top: 3px solid var(--accent); box-shadow: 0 1px 2px rgba(16,34,44,.06), 0 8px 24px rgba(16,34,44,.06);
+}
+.card-media { position: relative; margin: 0; aspect-ratio: 16/9; background: var(--deep); overflow: hidden; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; }
+.card-media figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 16px 8px;
+  font-size: .78rem; color: #fff; background: linear-gradient(transparent, rgba(4,20,31,.75));
+}
+.card-media-empty {
+  display: grid; place-items: center; color: rgba(255,255,255,.35);
+  background: radial-gradient(ellipse at 30% 0%, #1f7f8f, var(--deep) 70%);
+}
+.card-media-empty svg { width: 54px; height: 54px; }
+.card-video { aspect-ratio: 16/9; background: #000; }
+.card-video iframe { width: 100%; height: 100%; border: 0; }
+.card-body { padding: 24px 26px 26px; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; gap: 10px; }
+.tag {
+  font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 4px;
+}
+.date { font-size: .85rem; color: var(--muted); }
+.award-card h3 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 1.15rem; line-height: 1.35; }
+.card-org { font-size: .85rem; color: var(--muted); margin-top: 6px; }
+.card-text { margin-top: 12px; font-size: .97rem; }
+.card-links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 16px; }
+.card-links a { color: var(--mid); font-weight: 500; font-size: .9rem; }
+.card-more { margin-top: 18px; padding-top: 14px; border-top: 1px solid #e6eeee; }
+.card-more summary { cursor: pointer; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+.card-more[open] summary { margin-bottom: 14px; }
+.card-more .card-video { border-radius: 8px; overflow: hidden; }
+.card-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.card-gallery img { aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; }
+
+/* (legacy timeline) */
 .timeline { list-style: none; border-left: 2px solid #d6e5e5; margin-left: 8px; }
 .timeline li { position: relative; padding: 0 0 30px 32px; }
 .timeline li::before {

@@ -2,6 +2,8 @@
   const S = window.SITE || {};
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  // *texto* → cursiva (para nombres de especie)
+  const rich = (s) => esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>");
   const placeholder = (text) => `<div class="placeholder">${text}</div>`;
 
   // ---- Simple bindings ----
@@ -99,13 +101,40 @@
   // ---- Awards ----
   const awards = S.awards || [];
   if (awards.length) {
-    awards.sort((a, b) => (b.year || 0) - (a.year || 0));
-    $("awardsList").innerHTML = awards.map((a) => `
-      <li class="reveal">
-        <div class="yr">${esc(a.year)}</div>
-        <div class="ttl">${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.title)}</a>` : esc(a.title)}</div>
-        <div class="muted">${esc(a.event)}</div>
-      </li>`).join("");
+    const fmtDate = (d) => {
+      const dt = new Date(d + "T12:00:00");
+      return isNaN(dt) ? esc(d) : dt.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+    };
+    const yt = (id, title) => `<div class="card-video"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0" title="${esc(title)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+    const card = (a) => {
+      let media;
+      if (a.image) media = `<figure class="card-media"><img src="${esc(a.image)}" alt="${esc(a.imageCaption || a.title)}" loading="lazy">${a.imageCaption ? `<figcaption>${esc(a.imageCaption)}</figcaption>` : ""}</figure>`;
+      else if (a.video) media = yt(a.video, a.title);
+      else media = `<div class="card-media card-media-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2l1.5-2h6l1.5 2h2A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.8"/></svg></div>`;
+      const extras = [];
+      if (a.image && a.video) extras.push(`<details class="card-more"><summary>Watch the video</summary>${yt(a.video, a.title)}</details>`);
+      if ((a.gallery || []).length) extras.push(`<details class="card-more"><summary>View photo gallery</summary><div class="card-gallery">${a.gallery.map((g) => `<a href="${esc(g)}" target="_blank" rel="noopener"><img src="${esc(g)}" alt="" loading="lazy"></a>`).join("")}</div></details>`);
+      return `
+      <article class="award-card reveal">
+        ${media}
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">${esc(a.tag || "Award")}</span><span class="date">${fmtDate(a.date)}</span></div>
+          <h3>${rich(a.title)}</h3>
+          ${a.org ? `<p class="card-org">${esc(a.org)}</p>` : ""}
+          ${a.text ? `<p class="card-text">${rich(a.text)}</p>` : ""}
+          ${(a.links || []).length ? `<p class="card-links">${a.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} →</a>`).join("")}</p>` : ""}
+          ${extras.join("")}
+        </div>
+      </article>`;
+    };
+    awards.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    const byYear = {};
+    awards.forEach((a) => { const y = String(a.date).slice(0, 4); (byYear[y] = byYear[y] || []).push(a); });
+    $("awardsList").innerHTML = Object.keys(byYear).sort().reverse().map((y) => `
+      <div class="year-group">
+        <h3 class="year-h">${esc(y)}</h3>
+        <div class="award-grid">${byYear[y].map(card).join("")}</div>
+      </div>`).join("");
   } else {
     $("awardsList").outerHTML = placeholder("Festivals and contests you've taken part in will be listed here.");
   }
