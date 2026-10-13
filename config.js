@@ -30,8 +30,8 @@ window.SITE = {
 
   // --- Vídeo -----------------------------------------------------------
   // ID del canal de YouTube (empieza por "UC..."). Los vídeos nuevos aparecen solos.
-  youtubeChannelId: "",
-  youtubeHandle: "",        // ej. "@tucanal" (para el botón "Ver canal")
+  youtubeChannelId: "UCiKMjbEpGl3E2lJT2F6StUg",
+  youtubeHandle: "@mar_educado",
   // Vídeos destacados (opcional): IDs de YouTube que quieras mostrar grandes.
   featuredVideos: [
     // { id: "xxxxxxxxxxx", title: "Title", note: "Finalist — Festival X 2024" },
@@ -43,7 +43,7 @@ window.SITE = {
   ],
 
   // --- Instagram -------------------------------------------------------
-  instagramHandle: "",      // sin @
+  instagramHandle: "mar_educado",
   // Widget de Behold (behold.so): pega aquí el "Feed ID" para mostrar los posts automáticamente
   beholdFeedId: "",
 
@@ -59,10 +59,10 @@ window.SITE = {
     linkedin: "https://www.linkedin.com/in/xavier-bachot-iglesias-33b230161",
     github: "https://github.com/bachotxbi",
     // → sección Film
-    youtube: "",
-    instagram: "",
-    facebook: "",
-    tiktok: "",
+    youtube: "https://www.youtube.com/@mar_educado",
+    instagram: "https://www.instagram.com/mar_educado/",
+    facebook: "https://www.facebook.com/profile.php?id=100093498453940",
+    tiktok: "https://www.tiktok.com/@mar_educado",
     vimeo: ""
   }
 };
