@@ -122,19 +122,15 @@
           <h3>${rich(a.title)}</h3>
           ${a.org ? `<p class="card-org">${esc(a.org)}</p>` : ""}
           ${a.text ? `<p class="card-text">${rich(a.text)}</p>` : ""}
-          ${(a.links || []).length ? `<p class="card-links">${a.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} →</a>`).join("")}</p>` : ""}
-          ${extras.join("")}
+          <div class="card-foot">
+            ${(a.links || []).length ? `<p class="card-links">${a.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} →</a>`).join("")}</p>` : ""}
+            ${extras.join("")}
+          </div>
         </div>
       </article>`;
     };
     awards.sort((a, b) => String(b.date).localeCompare(String(a.date)));
-    const byYear = {};
-    awards.forEach((a) => { const y = String(a.date).slice(0, 4); (byYear[y] = byYear[y] || []).push(a); });
-    $("awardsList").innerHTML = Object.keys(byYear).sort().reverse().map((y) => `
-      <div class="year-group">
-        <h3 class="year-h">${esc(y)}</h3>
-        <div class="award-grid">${byYear[y].map(card).join("")}</div>
-      </div>`).join("");
+    $("awardsList").innerHTML = `<div class="award-grid">${awards.map(card).join("")}</div>`;
   } else {
     $("awardsList").outerHTML = placeholder("Festivals and contests you've taken part in will be listed here.");
   }
