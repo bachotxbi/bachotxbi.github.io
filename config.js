@@ -91,8 +91,11 @@ window.SITE = {
       title: "Winner — Marine Life category, 5th Photography Contest",
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph “El misterio de Las Canteras”, a white-spotted octopus (*Octopus macropus*) peeking out from a dense meadow of green algae at Las Canteras beach (Gran Canaria), won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
-      image: "images/misterio-de-las-canteras.jpg",
-      imageCaption: "El misterio de Las Canteras",
+      image: "images/concurso-fotografia-2023.jpg",
+      galleryLabel: "View the winning photo",
+      gallery: [
+        { src: "images/misterio-de-las-canteras.jpg", caption: "El misterio de Las Canteras" }
+      ],
       links: [
         { label: "Contest call (ULPGC)", url: "https://www.ulpgc.es/agenda/2023/05/10/v-concurso-fotografia" }
       ]
