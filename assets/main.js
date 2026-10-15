@@ -190,6 +190,24 @@
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
   document.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
 
+
+  // ---- Páginas: cada pestaña del menú muestra solo su sección ----
+  const PAGES = Array.from(document.querySelectorAll("section.page")).map((sec) => sec.id);
+  function route() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const page = PAGES.includes(id) ? id : "";
+    document.querySelectorAll("section.page").forEach((sec) => sec.classList.toggle("active", sec.id === page));
+    document.body.classList.toggle("on-page", !!page);
+    document.querySelectorAll(".nav-links a").forEach((a) => a.classList.toggle("current", a.getAttribute("href") === "#" + page));
+    document.querySelectorAll(".page.active .reveal").forEach((e) => e.classList.add("visible"));
+    const label = page ? (document.querySelector(`.nav-links a[href="#${page}"]`) || {}).textContent : "";
+    document.title = (label ? label + " · " : "") + `${S.name || ""} — ${S.tagline || ""}`;
+    window.scrollTo(0, 0);
+    onScroll();
+  }
+  window.addEventListener("hashchange", route);
+  route();
+
   let io;
   function observe() {
     if (!("IntersectionObserver" in window)) { document.querySelectorAll(".reveal").forEach((e) => e.classList.add("visible")); return; }
