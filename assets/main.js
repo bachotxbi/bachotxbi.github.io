@@ -189,23 +189,22 @@
   document.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => document.body.classList.remove("menu-open")));
 
 
-  // ---- Páginas: cada pestaña del menú muestra solo su sección ----
-  const PAGES = Array.from(document.querySelectorAll("section.page")).map((sec) => sec.id);
-  function route() {
-    let id = decodeURIComponent(location.hash.slice(1));
-    if (id === "awards") { history.replaceState(null, "", "#recognition"); id = "recognition"; }   // enlaces antiguos
-    const page = PAGES.includes(id) ? id : "";
-    document.querySelectorAll("section.page").forEach((sec) => sec.classList.toggle("active", sec.id === page));
-    document.body.classList.toggle("on-page", !!page);
-    document.querySelectorAll(".nav-links a").forEach((a) => a.classList.toggle("current", a.getAttribute("href") === "#" + page));
-    document.querySelectorAll(".page.active .reveal").forEach((e) => e.classList.add("visible"));
-    const label = page ? (document.querySelector(`.nav-links a[href="#${page}"]`) || {}).textContent : "";
-    document.title = (label ? label + " · " : "") + `${S.name || ""} — ${S.tagline || ""}`;
-    window.scrollTo(0, 0);
-    onScroll();
+  // ---- Enlaces antiguos #awards → #recognition
+  if (location.hash === "#awards") {
+    history.replaceState(null, "", "#recognition");
+    const t = $("recognition"); if (t) setTimeout(() => t.scrollIntoView(), 0);
   }
-  window.addEventListener("hashchange", route);
-  route();
+
+  // ---- Resalta en el menú la sección que se está viendo
+  const links = Array.from(document.querySelectorAll(".nav-links a"));
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver((ents) => ents.forEach((e) => {
+      if (e.isIntersecting) links.forEach((a) => a.classList.toggle("current", a.getAttribute("href") === "#" + e.target.id));
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("main section[id]").forEach((sec) => spy.observe(sec));
+    new IntersectionObserver((ents) => ents.forEach((e) => { if (e.isIntersecting) links.forEach((a) => a.classList.remove("current")); }),
+      { threshold: .5 }).observe(document.querySelector(".hero"));
+  }
 
   let io;
   function observe() {

@@ -264,14 +264,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
   .reveal { opacity: 1; transform: none; }
 }
 
-/* ---------- Pages (one section at a time) ---------- */
-.page { display: none; }
-.page.active { display: block; animation: pageIn .45s ease both; }
-@keyframes pageIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-body.on-page .hero { display: none; }
-body.on-page .nav { background: rgba(4, 20, 31, .94); backdrop-filter: blur(10px); }
-body.on-page main { min-height: calc(100vh - 76px); display: flex; flex-direction: column; }
-body.on-page .page.active { flex: 1; padding-top: 150px; }
+/* ---------- Active section in the menu ---------- */
 .nav-links a.current { opacity: 1; color: var(--accent); }
 .nav-links a.current::after {
   content: ""; display: block; height: 2px; margin-top: 4px; border-radius: 2px; background: var(--accent);
@@ -282,7 +275,6 @@ body.on-page .page.active { flex: 1; padding-top: 150px; }
   .award-card h3 { font-size: 1.15rem; }
 }
 @media (max-width: 760px) {
-  body.on-page .page.active { padding-top: 110px; }
   .nav-links a.current::after { display: none; }
 }
 #recognition .section-label { margin-bottom: 28px; }
