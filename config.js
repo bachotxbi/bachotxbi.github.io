@@ -42,6 +42,17 @@ window.SITE = {
   // (*texto* = cursiva), image (foto de portada), video (ID de YouTube), links [{label, url}], gallery [fotos]
   awards: [
     {
+      date: "2025-09-15",
+      tag: "Photography",
+      title: "Five photographs selected in the first round — MARE Balear 2025",
+      org: "MARE · Audiovisual Competition for the Conservation of the Balearic Sea · Marilles Foundation",
+      text: "I entered a portfolio of 20 underwater photographs in the 6th edition of MARE Balear, an international competition that uses images to promote the conservation of the Balearic Sea. Five of them made it through the first round of judging.",
+      image: "",            // ej. "images/mare-2025.jpg" (una de las 5 fotos seleccionadas)
+      links: [
+        { label: "MARE Balear", url: "https://marebalear.org/" }
+      ]
+    },
+    {
       date: "2024-06-01",
       tag: "Photography",
       title: "Winner — Marine Life category, 6th Photography Contest",
