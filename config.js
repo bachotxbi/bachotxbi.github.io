@@ -48,6 +48,7 @@ window.SITE = {
       org: "MARE · Audiovisual Competition for the Conservation of the Balearic Sea · Marilles Foundation",
       text: "I entered a portfolio of 20 underwater photographs in the 6th edition of MARE Balear, a competition that uses images to promote the conservation of the Balearic Sea. Five of them made it through the first round of judging.",
       image: "images/mare-balear-2025.jpg",
+      imageFit: "contain",  // muestra el cartel entero sin recortar
       links: [
         { label: "MARE Balear", url: "https://marebalear.org/es/" },
         { label: "Marilles Foundation", url: "https://marilles.org/en/project/mare" }
