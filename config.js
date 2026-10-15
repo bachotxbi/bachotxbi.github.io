@@ -60,12 +60,13 @@ window.SITE = {
       title: "Winner — Marine Life category, 6th Photography Contest",
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph “Camuflaje a plena luz”, a common cuttlefish (*Sepia officinalis*) gliding over a sunlit rocky reef, won the Marine Life category in the 6th edition of the Faculty of Marine Sciences photography contest.",
-      image: "images/sepia-officinalis.jpg",
-      imageCaption: "Camuflaje a plena luz",
+      image: "images/concurso-fotografia-2024.jpg",
       links: [
         { label: "Contest call (ULPGC)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
       ],
+      galleryLabel: "View photos",
       gallery: [
+        { src: "images/sepia-officinalis.jpg", caption: "Camuflaje a plena luz" },
         { src: "images/vi-concurso-ganadores-full.jpg", caption: "Winners of the 6th Photography Contest" }
       ]
     },
