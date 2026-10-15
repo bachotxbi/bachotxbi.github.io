@@ -163,7 +163,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .channel-actions { margin-top: 22px; }
 
 /* ---------- Awards (blog cards) ---------- */
-#awards .container { max-width: 1240px; }
+#recognition .container { max-width: 1240px; }
 .award-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; align-items: stretch; }
 .award-card {
   display: flex; flex-direction: column;
@@ -285,3 +285,4 @@ body.on-page .page.active { flex: 1; padding-top: 150px; }
   body.on-page .page.active { padding-top: 110px; }
   .nav-links a.current::after { display: none; }
 }
+#recognition .section-label { margin-bottom: 28px; }

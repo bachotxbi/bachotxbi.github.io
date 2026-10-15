@@ -192,7 +192,8 @@
   // ---- Páginas: cada pestaña del menú muestra solo su sección ----
   const PAGES = Array.from(document.querySelectorAll("section.page")).map((sec) => sec.id);
   function route() {
-    const id = decodeURIComponent(location.hash.slice(1));
+    let id = decodeURIComponent(location.hash.slice(1));
+    if (id === "awards") { history.replaceState(null, "", "#recognition"); id = "recognition"; }   // enlaces antiguos
     const page = PAGES.includes(id) ? id : "";
     document.querySelectorAll("section.page").forEach((sec) => sec.classList.toggle("active", sec.id === page));
     document.body.classList.toggle("on-page", !!page);
