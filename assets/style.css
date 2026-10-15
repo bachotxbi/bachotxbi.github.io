@@ -206,7 +206,10 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .card-more[open] summary { margin-bottom: 14px; }
 .card-more .card-video { border-radius: 8px; overflow: hidden; }
 .card-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
-.card-gallery a:only-child img { aspect-ratio: auto; }
+.card-gallery figure { margin: 0; }
+.card-gallery figcaption { font-size: .82rem; color: var(--muted); margin-top: 6px; }
+.card-gallery.single { grid-template-columns: 1fr; }
+.card-gallery.single img { aspect-ratio: auto; }
 .card-gallery img { aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; }
 
 /* (legacy timeline) */

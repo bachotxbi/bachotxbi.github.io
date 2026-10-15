@@ -39,7 +39,8 @@ window.SITE = {
 
   // --- Concursos y reconocimientos --------------------------------------
   // Tarjetas tipo blog. Campos: date (AAAA-MM-DD), tag, title, org, text,
-  // (*texto* = cursiva), image (foto de portada), video (ID de YouTube), links [{label, url}], gallery [fotos]
+  // (*texto* = cursiva), image (foto de portada), video (ID de YouTube), links [{label, url}],
+  // gallery [{src, caption}] (fotos en el desplegable "View photo")
   awards: [
     {
       date: "2025-09-15",
@@ -64,7 +65,9 @@ window.SITE = {
       links: [
         { label: "Contest call (ULPGC)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
       ],
-      gallery: ["images/vi-concurso-ganadores-full.jpg"]
+      gallery: [
+        { src: "images/vi-concurso-ganadores-full.jpg", caption: "Winners of the 6th Photography Contest" }
+      ]
     },
     {
       date: "2023-12-04",
@@ -72,8 +75,10 @@ window.SITE = {
       title: "Finalist — Impulsa Talento Awards, Blue Economy, with the project “Kalima”",
       org: "ULPGC Vice-Rectorate for Students, Alumni and Employability · DISA Foundation · Banco Santander · Canary Islands Maritime Cluster",
       text: "Kalima was recognised as a finalist in the Blue Economy category of the 2023 Impulsa Talento Awards, which support entrepreneurial ideas from the university community aligned with the Sustainable Development Goals.",
-      image: "images/impulsa-talento-finalistas.jpg",
-      imageCaption: "Finalists of the 2023 Impulsa Talento Awards",
+      image: "images/impulsa-talento-2023.jpg",
+      gallery: [
+        { src: "images/impulsa-talento-finalistas.jpg", caption: "Finalists of the 2023 Impulsa Talento Awards" }
+      ],
       video: "umeWxe1g6Hg",
       links: [
         { label: "ULPGC news", url: "https://www10.ulpgc.es/noticia/2023/12/04/ulpgc-premia-seis-iniciativas-emprendedoras-universitarios-relacionadas-ods" },

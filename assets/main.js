@@ -113,7 +113,9 @@
       else media = `<div class="card-media card-media-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2l1.5-2h6l1.5 2h2A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.8"/></svg></div>`;
       const extras = [];
       if (a.image && a.video) extras.push(`<details class="card-more"><summary>Watch the video</summary>${yt(a.video, a.title)}</details>`);
-      if ((a.gallery || []).length) extras.push(`<details class="card-more"><summary>View photo gallery</summary><div class="card-gallery">${a.gallery.map((g) => `<a href="${esc(g)}" target="_blank" rel="noopener"><img src="${esc(g)}" alt="" loading="lazy"></a>`).join("")}</div></details>`);
+      // Galería: cada foto puede ser "ruta.jpg" o { src: "ruta.jpg", caption: "pie de foto" }
+      const gal = (a.gallery || []).map((g) => (typeof g === "string" ? { src: g } : g));
+      if (gal.length) extras.push(`<details class="card-more"><summary>${esc(a.galleryLabel || (gal.length === 1 ? "View photo" : "View photo gallery"))}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
       return `
       <article class="award-card reveal">
         ${media}
