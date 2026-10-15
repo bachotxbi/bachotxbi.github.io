@@ -44,7 +44,7 @@ window.SITE = {
     {
       date: "2025-09-15",
       tag: "Photography",
-      title: "Five photographs selected in the first round — MARE Balear 2025",
+      title: "Participant — MARE Balear 2025, 6th edition",
       org: "MARE · Audiovisual Competition for the Conservation of the Balearic Sea · Marilles Foundation",
       text: "I entered a portfolio of 20 underwater photographs in the 6th edition of MARE Balear, a competition that uses images to promote the conservation of the Balearic Sea. Five of them made it through the first round of judging.",
       image: "images/mare-balear-2025.jpg",
