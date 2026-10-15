@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=202610151653">
-  <script src="config.js?v=202610151653"></script>
+  <link rel="stylesheet" href="assets/style.css?v=202610151655">
+  <script src="config.js?v=202610151655"></script>
 </head>
 <body>
   <nav class="nav" id="nav">
@@ -19,7 +19,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#film">Film</a></li>
+      <li><a href="#scicomm">Science communication</a></li>
       <li><a href="#recognition">Recognition</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -33,7 +33,7 @@
       <h1 data-bind="name"></h1>
       <p class="tagline" data-bind="tagline"></p>
       <div class="hero-actions">
-        <a href="#film" class="btn btn-light">Watch films</a>
+        <a href="#scicomm" class="btn btn-light">Watch videos</a>
         <a href="#research" class="btn btn-ghost">Research</a>
       </div>
     </div>
@@ -64,12 +64,23 @@
       </div>
     </section>
 
-    <section id="film" class="section section-deep">
+    <section id="scicomm" class="section section-deep">
       <div class="container">
-        <p class="section-label">Underwater film</p>
-        <h2>Through the lens</h2>
-        <ul class="profile-links" id="filmLinks"></ul>
-        <div class="featured" id="featured"></div>
+        <p class="section-label">Science communication</p>
+        <div class="brand-intro">
+          <div class="brand-logo" id="meLogo"></div>
+          <div class="brand-copy">
+            <h2 id="meName"></h2>
+            <p class="brand-handle" id="meHandle"></p>
+            <div class="lead" id="meText"></div>
+            <div class="brand-actions" id="meActions"></div>
+            <ul class="profile-links" id="filmLinks"></ul>
+          </div>
+        </div>
+        <div id="featuredBlock">
+          <h3 class="sub-h">Featured videos</h3>
+          <div class="featured" id="featured"></div>
+        </div>
         <div id="channel"></div>
         <div class="ig-block" id="instagram">
           <h3 class="sub-h" id="igTitle">On Instagram</h3>
@@ -99,6 +110,6 @@
     <p>© <span id="year"></span> <span data-bind="name"></span></p>
   </footer>
 
-  <script src="assets/main.js?v=202610151653"></script>
+  <script src="assets/main.js?v=202610151655"></script>
 </body>
 </html>

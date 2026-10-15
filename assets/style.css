@@ -163,7 +163,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .channel-actions { margin-top: 22px; }
 
 /* ---------- Awards (blog cards) ---------- */
-#recognition .container { max-width: 1240px; }
+#recognition .container, #scicomm .container { max-width: 1240px; }
 .award-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; align-items: stretch; }
 .award-card {
   display: flex; flex-direction: column;
@@ -278,3 +278,22 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
   .nav-links a.current::after { display: none; }
 }
 #recognition .section-label { margin-bottom: 28px; }
+
+/* ---------- Science communication · Mar Educado ---------- */
+.brand-intro { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: center; margin-bottom: 72px; }
+.brand-logo {
+  width: 220px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #fff;
+  display: grid; place-items: center; box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; }
+.brand-logo span { font-family: "Fraunces", serif; font-size: 4rem; color: var(--mid); }
+.brand-copy h2 { margin-bottom: .3rem; }
+.brand-handle { color: var(--accent); font-weight: 500; margin-bottom: 1.2rem; }
+.brand-actions:not(:empty) { margin: 1.4rem 0 1.4rem; }
+.brand-copy .profile-links { margin: 1.2rem 0 0; }
+#scicomm .sub-h { margin-bottom: 20px; }
+#featuredBlock { margin-bottom: 56px; }
+@media (max-width: 760px) {
+  .brand-intro { grid-template-columns: 1fr; gap: 28px; text-align: left; }
+  .brand-logo { width: 150px; }
+}

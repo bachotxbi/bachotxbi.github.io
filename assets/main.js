@@ -78,8 +78,19 @@
     $("pubs").innerHTML = placeholder("Publications will appear here — add your ORCID iD or a list of papers in <code>config.js</code>.");
   }
 
+  // ---- Science communication · Mar Educado ----
+  const ME = S.marEducado || {};
+  $("meName").textContent = ME.name || "";
+  $("meHandle").textContent = ME.handle || "";
+  $("meLogo").innerHTML = ME.logo
+    ? `<img src="${esc(ME.logo)}" alt="${esc(ME.name || "")} logo">`
+    : `<span>${esc((ME.name || "").split(" ").map((w) => w[0]).join(""))}</span>`;
+  $("meText").innerHTML = (ME.text || []).map((t) => `<p>${rich(t)}</p>`).join("");
+  if (ME.website) $("meActions").innerHTML = `<a class="btn btn-accent" href="${esc(ME.website)}" target="_blank" rel="noopener">Visit ${esc(ME.name || "website")} →</a>`;
+
   // ---- Film ----
   const feat = S.featuredVideos || [];
+  if (!feat.length) $("featuredBlock").style.display = "none";
   $("featured").innerHTML = feat.map((v) => `
     <article class="video-card reveal">
       <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.id)}?rel=0" title="${esc(v.title)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
@@ -190,6 +201,7 @@
 
 
   // ---- Enlaces antiguos #awards → #recognition
+  if (location.hash === "#film") { history.replaceState(null, "", "#scicomm"); setTimeout(() => $("scicomm").scrollIntoView(), 0); }
   if (location.hash === "#awards") {
     history.replaceState(null, "", "#recognition");
     const t = $("recognition"); if (t) setTimeout(() => t.scrollIntoView(), 0);

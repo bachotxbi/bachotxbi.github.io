@@ -28,6 +28,17 @@ window.SITE = {
     // { year: 2025, title: "Title of the paper", authors: "Surname A, Surname B", journal: "Journal", doi: "10.xxxx/xxxxx" },
   ],
 
+  // --- Science communication · Mar Educado -----------------------------
+  marEducado: {
+    name: "Mar Educado",
+    handle: "@mar_educado",
+    logo: "",               // ej. "images/mar-educado-logo.png"
+    website: "",            // web de Mar Educado
+    text: [
+      "Mar Educado is my science communication project: short underwater films and posts that bring marine ecology closer to everyone. (Write 2–3 sentences: what it is, what you talk about and who it is for.)"
+    ]
+  },
+
   // --- Vídeo -----------------------------------------------------------
   // ID del canal de YouTube (empieza por "UC..."). Los vídeos nuevos aparecen solos.
   youtubeChannelId: "UCiKMjbEpGl3E2lJT2F6StUg",
