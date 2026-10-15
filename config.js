@@ -48,9 +48,9 @@ window.SITE = {
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph “Camuflaje a plena luz”, a common cuttlefish (*Sepia officinalis*) gliding over a sunlit rocky reef, won the Marine Life category in the 6th edition of the Faculty of Marine Sciences photography contest.",
       image: "images/sepia-officinalis.jpg",
-      imageCaption: "“Camuflaje a plena luz” · *Sepia officinalis*",
+      imageCaption: "Camuflaje a plena luz",
       links: [
-        { label: "Contest announcement (ULPGC Library)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
+        { label: "Contest call (ULPGC)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
       ],
       gallery: ["images/vi-concurso-ganadores-full.jpg"]
     },
@@ -75,7 +75,7 @@ window.SITE = {
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph “El misterio de Las Canteras”, a white-spotted octopus (*Octopus macropus*) peeking out from a dense meadow of green algae at Las Canteras beach (Gran Canaria), won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
       image: "images/misterio-de-las-canteras.jpg",
-      imageCaption: "“El misterio de Las Canteras”",
+      imageCaption: "El misterio de Las Canteras",
       links: [
         { label: "Contest call (ULPGC)", url: "https://www.ulpgc.es/agenda/2023/05/10/v-concurso-fotografia" }
       ]
