@@ -13,7 +13,7 @@ window.SITE = {
   portrait: "",             // ej. "images/me.jpg" (foto tuya, cuadrada)
 
   about: [
-    "I'm a marine ecologist working as a project technician on Dive Reporter at the ECOAQUA Institute of the University of Las Palmas de Gran Canaria (ULPGC). I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
+    "I'm a marine ecologist and projects technician in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work on Dive Reporter, a citizen-science platform with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
     "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), before working as a projects technician at the UIB.",
     "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
   ],
@@ -30,20 +30,32 @@ window.SITE = {
   logbook: [
     {
       years: "2026 — now", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
-      title: "Project technician — Dive Reporter",
-      org: "ECOAQUA Institute · University of Las Palmas de Gran Canaria (ULPGC)",
+      title: "Projects technician, ECOAQUA",
+      org: "Biodiversity and Conservation group (BIOCON) · ECOAQUA Institute, University of Las Palmas de Gran Canaria",
       photo: "",
       details: [
-        "(Pending: 2–3 sentences on Dive Reporter — what the project does, what your role is, and what you work on day to day.)"
+        "I support the expansion of Dive Reporter across Macaronesia: a citizen-science platform where dive centres record bioindicator species during their dives, creating a long-term picture of how coastal ecosystems are changing.",
+        "My work connects dive centres, scientists and institutions:",
+        [
+          "Rolling out the platform in selected dive centres and helping them adopt it in daily operations.",
+          "Training instructors and guides to identify bioindicator species and to use the app underwater.",
+          "Adapting the regional species lists together with local scientific partners.",
+          "Following up with around 20 dive centres, keeping them active and solving technical questions.",
+          "Running basic quality control (QA/QC) on the submitted data and coordinating regular reviews with the science teams.",
+          "Helping produce and review the platform's automatic reports.",
+          "Tracking trends in the recorded species to help detect ecological change."
+        ]
       ],
       links: [
-        { label: "ECOAQUA", url: "https://ecoaqua.ulpgc.es/" }
+        { label: "Dive Reporter", url: "https://www.dive-reporter.org/" },
+        { label: "BIOCON group", url: "https://www.ecoaqua.eu/es/biocon.html" },
+        { label: "ECOAQUA", url: "https://www.ecoaqua.eu/es/" }
       ]
     },
     {
       years: "2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
-      title: "Marine ecology projects technician",
-      org: "University of the Balearic Islands (UIB)",
+      title: "Projects technician, UIB",
+      org: "Marine ecology projects · University of the Balearic Islands",
       photo: "",
       details: [
         "Technical support for marine ecology projects at the University of the Balearic Islands, in Mallorca."
@@ -54,8 +66,8 @@ window.SITE = {
     },
     {
       years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
-      title: "MSc in Marine Ecology",
-      org: "University of the Balearic Islands (UIB) · JAE Intro research fellowship at IMEDEA (CSIC)",
+      title: "MSc in Marine Ecology, UIB",
+      org: "University of the Balearic Islands · JAE Intro research fellowship at IMEDEA (CSIC)",
       photo: "",
       details: [
         "Master's degree in Marine Ecology at the University of the Balearic Islands.",
@@ -68,8 +80,8 @@ window.SITE = {
     },
     {
       years: "2022 — 2023", place: "Florianópolis, Brazil", coords: "27.60° S · 48.52° W",
-      title: "Exchange year & reef ecology research",
-      org: "Federal University of Santa Catarina (UFSC) · Reef Environments Ecology Lab (LABAR)",
+      title: "Exchange year, UFSC",
+      org: "Federal University of Santa Catarina · Research volunteer at the Reef Environments Ecology Lab (LABAR)",
       photo: "",
       details: [
         "An academic year at the Federal University of Santa Catarina, in southern Brazil.",
@@ -81,8 +93,8 @@ window.SITE = {
     },
     {
       years: "2020 — 2024", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
-      title: "BSc in Marine Sciences",
-      org: "University of Las Palmas de Gran Canaria (ULPGC) · Research internship at ECOAQUA",
+      title: "BSc in Marine Sciences, ULPGC",
+      org: "University of Las Palmas de Gran Canaria · Research internship at ECOAQUA",
       photo: "",
       details: [
         "Degree in Marine Sciences at the University of Las Palmas de Gran Canaria.",
@@ -95,8 +107,8 @@ window.SITE = {
     },
     {
       years: "2021", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
-      title: "SSI Divemaster",
-      org: "Divemaster internship at Karapat Dive",
+      title: "SSI Divemaster, Karapat Dive",
+      org: "Divemaster internship · Gran Canaria",
       photo: "",
       details: [
         "Professional diving certification with SSI, earned through a divemaster internship at Karapat Dive in Gran Canaria: guiding dives, assisting instructors and dive planning."
