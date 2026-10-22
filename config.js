@@ -32,7 +32,9 @@ window.SITE = {
       years: "2026 — now", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
       title: "Projects technician, ECOAQUA",
       org: "Biodiversity and Conservation group (BIOCON) · ECOAQUA Institute, University of Las Palmas de Gran Canaria",
-      photo: "",
+      photo: "images/log-dive-reporter.jpg",
+      panelPhoto: "images/log-dive-reporter-centre.jpg",   // foto dentro de "Read more"
+      panelPhotoCaption: "Setting up Dive Reporter with a partner dive centre",
       details: [
         "I support the expansion of Dive Reporter across Macaronesia: a citizen-science platform where dive centres record bioindicator species during their dives, creating a long-term picture of how coastal ecosystems are changing.",
         "My work connects dive centres, scientists and institutions:",

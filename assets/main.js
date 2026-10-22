@@ -55,8 +55,10 @@
     const btn = ev.target.closest(".log-more"); if (!btn) return;
     const e = log[+btn.dataset.i];
     const ph = lp.querySelector(".log-sheet-photo");
-    ph.className = "log-sheet-photo" + (e.photo ? "" : " empty");
-    ph.innerHTML = (e.photo ? `<img src="${esc(e.photo)}" alt="">` : "") + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`;
+    const pimg = e.panelPhoto || e.photo;
+    ph.className = "log-sheet-photo" + (pimg ? "" : " empty") + (e.panelPhoto ? " tall" : "");
+    ph.innerHTML = (pimg ? `<img src="${esc(pimg)}" alt="${esc(e.panelPhotoCaption || "")}">` : "")
+      + (e.panelPhotoCaption ? `<span class="log-cap">${esc(e.panelPhotoCaption)}</span>` : "") + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`;
     lp.querySelector(".log-sheet-body").innerHTML = `
       <p class="log-years">${esc(e.years)}</p>
       <h3>${rich(e.title)}</h3>
