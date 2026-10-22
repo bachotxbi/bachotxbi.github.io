@@ -45,6 +45,21 @@
         <p class="log-place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>${esc(e.place)}</p>
       </div>
     </li>`).join("");
+  // Flechas de la bitácora
+  const rail = $("logbook"), railWrap = rail.parentElement;
+  const step = () => (rail.querySelector(".log-entry")?.offsetWidth || 300) + 24;
+  $("logPrev").onclick = () => rail.scrollBy({ left: -step(), behavior: "smooth" });
+  $("logNext").onclick = () => rail.scrollBy({ left: step(), behavior: "smooth" });
+  const railState = () => {
+    const max = rail.scrollWidth - rail.clientWidth - 4;
+    $("logPrev").classList.toggle("hidden", rail.scrollLeft <= 4);
+    $("logNext").classList.toggle("hidden", rail.scrollLeft >= max);
+    railWrap.classList.toggle("at-end", rail.scrollLeft >= max);
+  };
+  rail.addEventListener("scroll", railState, { passive: true });
+  window.addEventListener("resize", railState);
+  setTimeout(railState, 50);
+
   // Panel de detalle de la bitácora
   const lp = document.createElement("div");
   lp.className = "log-panel";

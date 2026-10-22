@@ -398,3 +398,37 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .log-sheet-photo.tall img { object-position: 50% 30%; }
 .log-cap { position: absolute; z-index: 1; right: 14px; bottom: 12px; color: #fff; font-size: .78rem; opacity: .9; max-width: 60%; text-align: right; }
 .log-photo:not(.empty) .log-coords { bottom: auto; top: 12px; left: auto; right: 14px; }
+
+/* ---------- Logbook: larger cards, hidden scrollbars, arrows ---------- */
+.logbook-rail { position: relative; }
+.logbook {
+  grid-auto-columns: calc((100% - 3 * 24px) / 3.25); gap: 24px;
+  overflow-x: auto; overflow-y: hidden; padding: 6px 4px 22px; scroll-behavior: smooth;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.logbook::-webkit-scrollbar { display: none; }
+.log-body { padding: 22px 24px 26px; }
+.log-entry h3 { font-size: 1.3rem; }
+.log-org { font-size: .95rem; }
+.log-years { font-size: .82rem; }
+.log-more, .log-place { font-size: .95rem; }
+.lb-arrow {
+  position: absolute; top: 34%; z-index: 3; width: 52px; height: 52px; border-radius: 50%;
+  border: 0; background: #fff; color: var(--deep); font-size: 2rem; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; padding-bottom: 4px;
+  box-shadow: 0 6px 20px rgba(16,34,44,.22); transition: opacity .25s, transform .2s;
+}
+.lb-arrow:hover { transform: scale(1.08); }
+.lb-left { left: -18px; }
+.lb-right { right: -18px; }
+.lb-arrow.hidden { opacity: 0; pointer-events: none; }
+.logbook-rail::after {
+  content: ""; position: absolute; top: 0; right: 0; bottom: 22px; width: 70px; pointer-events: none;
+  background: linear-gradient(90deg, rgba(246,243,236,0), var(--sand)); transition: opacity .25s;
+}
+.logbook-rail.at-end::after { opacity: 0; }
+@media (max-width: 860px) {
+  .logbook { grid-auto-columns: 82%; }
+  .lb-arrow { width: 42px; height: 42px; font-size: 1.6rem; }
+  .lb-left { left: -8px; } .lb-right { right: -8px; }
+}
