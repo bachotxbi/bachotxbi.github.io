@@ -106,6 +106,7 @@ window.SITE = {
       gallery: [
         { src: "images/mare-2025-pelagia-noctiluca.jpg", caption: "*Pelagia noctiluca*" },
         { src: "images/mare-2025-octopus-vulgaris.jpg", caption: "*Octopus vulgaris*" },
+        { src: "images/mare-2025-octopus-vulgaris-2.jpg", caption: "*Octopus vulgaris*" },
         { src: "images/mare-2025-cotylorhiza-tuberculata.jpg", caption: "*Cotylorhiza tuberculata*" },
         { src: "images/mare-2025-rhizostoma-pulmo.jpg", caption: "*Rhizostoma pulmo*" }
       ],
