@@ -26,7 +26,24 @@
   $("portrait").innerHTML = S.portrait
     ? `<img src="${esc(S.portrait)}" alt="${esc(S.name)}">`
     : esc((S.name || "?").split(" ").map((w) => w[0]).join("").slice(0, 2));
-  $("aboutText").innerHTML = (S.about || []).map((p) => `<p>${esc(p)}</p>`).join("");
+  $("aboutText").innerHTML = (S.about || []).map((p) => `<p>${rich(p)}</p>`).join("");
+  $("facts").innerHTML = (S.facts || []).map((f) => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("");
+  const log = S.logbook || [];
+  if (!log.length) $("logbookWrap").style.display = "none";
+  $("logbook").innerHTML = log.map((e, i) => `
+    <li class="log-entry reveal">
+      <div class="log-photo${e.photo ? "" : " empty"}">
+        ${e.photo ? `<img src="${esc(e.photo)}" alt="${esc(e.place)}" loading="lazy">` : ""}
+        <span class="log-no">#${String(log.length - i).padStart(2, "0")}</span>
+        <span class="log-coords">${esc(e.coords || "")}</span>
+      </div>
+      <div class="log-body">
+        <p class="log-years">${esc(e.years)}</p>
+        <h3>${rich(e.title)}</h3>
+        <p class="log-org">${esc(e.org || "")}</p>
+        <p class="log-place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>${esc(e.place)}</p>
+      </div>
+    </li>`).join("");
   if (S.cvFile) $("cvBtn").innerHTML = `<a class="btn btn-accent" href="${esc(S.cvFile)}" target="_blank" rel="noopener">Download CV</a>`;
 
   // ---- Research ----

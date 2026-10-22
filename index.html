@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=202610151655">
-  <script src="config.js?v=202610151655"></script>
+  <link rel="stylesheet" href="assets/style.css?v=202610221310">
+  <script src="config.js?v=202610221310"></script>
 </head>
 <body>
   <nav class="nav" id="nav">
@@ -42,13 +42,23 @@
 
   <main>
     <section id="about" class="section">
-      <div class="container about-grid">
-        <div class="portrait" id="portrait"></div>
-        <div>
-          <p class="section-label">About</p>
-          <h2>About me</h2>
-          <div id="aboutText" class="lead"></div>
-          <div id="cvBtn"></div>
+      <div class="container">
+        <div class="about-grid">
+          <div class="portrait" id="portrait"></div>
+          <div>
+            <p class="section-label">About</p>
+            <h2>About me</h2>
+            <div id="aboutText" class="lead"></div>
+            <div id="cvBtn"></div>
+          </div>
+        </div>
+        <dl class="facts" id="facts"></dl>
+        <div class="logbook-wrap" id="logbookWrap">
+          <div class="logbook-head">
+            <p class="section-label">Logbook</p>
+            <p class="muted">Where the path has taken me so far.</p>
+          </div>
+          <ol class="logbook" id="logbook"></ol>
         </div>
       </div>
     </section>
@@ -110,6 +120,6 @@
     <p>© <span id="year"></span> <span data-bind="name"></span></p>
   </footer>
 
-  <script src="assets/main.js?v=202610151655"></script>
+  <script src="assets/main.js?v=202610221310"></script>
 </body>
 </html>

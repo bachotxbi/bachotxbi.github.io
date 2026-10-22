@@ -7,14 +7,57 @@ window.SITE = {
   // --- Identidad -------------------------------------------------------
   name: "Xavier Bachot Iglesias",
   tagline: "Marine Ecologist · Underwater Videographer",
-  location: "Canary Islands, Spain",
+  location: "Mallorca, Balearic Islands",
   heroPhoto: "",            // ej. "images/hero.jpg" (foto submarina horizontal)
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
   portrait: "",             // ej. "images/me.jpg" (foto tuya, cuadrada)
 
   about: [
-    "I am a marine scientist with an MSc in Marine Ecology. My research focuses on coastal ecosystems — write 1–2 sentences about your research here.",
-    "Behind the camera, I film underwater life to bring the ocean closer to people. Write 1–2 sentences about your videography here."
+    "I'm a marine ecologist working as a projects technician at the University of the Balearic Islands (UIB), in Mallorca. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
+    "I trained in Marine Sciences at the University of Las Palmas de Gran Canaria (ULPGC), spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the UIB while holding a research fellowship at IMEDEA (CSIC).",
+    "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
+  ],
+
+  // Datos rápidos bajo la presentación
+  facts: [
+    { label: "Based in", value: "Mallorca, Spain" },
+    { label: "Diving", value: "SSI Divemaster" },
+    { label: "Languages", value: "Spanish · Catalan · English · Portuguese" }
+  ],
+
+  // Bitácora: tu trayectoria como un registro de inmersiones.
+  // photo: "images/xxx.jpg" (foto de esa etapa). Vacío = fondo marino con las coordenadas.
+  logbook: [
+    {
+      years: "2025 — now", place: "Mallorca, Balearic Islands", coords: "39.57° N · 2.65° E",
+      title: "Marine ecology projects technician",
+      org: "University of the Balearic Islands (UIB)",
+      photo: ""
+    },
+    {
+      years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.57° N · 2.65° E",
+      title: "MSc in Marine Ecology",
+      org: "University of the Balearic Islands (UIB) · JAE Intro research fellowship at IMEDEA (CSIC)",
+      photo: ""
+    },
+    {
+      years: "2022 — 2023", place: "Florianópolis, Brazil", coords: "27.60° S · 48.52° W",
+      title: "Exchange year & reef ecology research",
+      org: "Federal University of Santa Catarina (UFSC) · Reef Environments Ecology Lab (LABAR)",
+      photo: ""
+    },
+    {
+      years: "2020 — 2024", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
+      title: "BSc in Marine Sciences",
+      org: "University of Las Palmas de Gran Canaria (ULPGC) · Research internship at ECOAQUA",
+      photo: ""
+    },
+    {
+      years: "2021", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
+      title: "SSI Divemaster",
+      org: "Divemaster internship at Karapat Dive",
+      photo: ""
+    }
   ],
   cvFile: "",               // ej. "files/CV.pdf"
 
