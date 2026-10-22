@@ -361,3 +361,32 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
 .lightbox.solo .lb-prev, .lightbox.solo .lb-next { display: none; }
 @media (max-width: 760px) { .lightbox { padding: 60px 12px 20px; } .lb-prev, .lb-next { top: auto; bottom: 14px; transform: none; } }
+
+.log-more {
+  align-self: flex-start; margin-top: 14px; background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; font-size: .88rem; font-weight: 600; color: var(--mid); text-decoration: underline; text-underline-offset: 3px;
+}
+.log-more:hover { color: var(--accent); }
+.log-panel {
+  position: fixed; inset: 0; z-index: 90; background: rgba(2,10,16,.7); backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center; padding: 24px;
+}
+.log-panel.open { display: flex; }
+.log-sheet {
+  position: relative; background: #fff; border-radius: var(--radius); overflow: hidden; width: min(640px, 100%);
+  max-height: calc(100vh - 48px); overflow-y: auto; box-shadow: 0 30px 80px rgba(0,0,0,.4); animation: sheetIn .3s ease;
+}
+@keyframes sheetIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.log-sheet-photo { position: relative; aspect-ratio: 16/7; background: var(--deep); overflow: hidden; }
+.log-sheet-photo img { width: 100%; height: 100%; object-fit: cover; }
+.log-sheet-photo.empty { background: repeating-radial-gradient(circle at 70% 120%, transparent 0 22px, rgba(255,255,255,.05) 23px 24px), radial-gradient(ellipse at 30% 0%, #1f7f8f, var(--deep) 75%); }
+.log-sheet-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,20,31,.45), transparent 40%, transparent 60%, rgba(4,20,31,.6)); }
+.log-sheet-body { padding: 26px 30px 30px; }
+.log-sheet-body h3 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 1.4rem; line-height: 1.3; }
+.log-details { margin-top: 16px; }
+.log-details p { margin-bottom: 10px; }
+.log-sheet-body .log-place { margin-top: 18px; padding-top: 0; color: var(--muted); }
+.log-close {
+  position: absolute; top: 12px; right: 12px; z-index: 2; width: 40px; height: 40px; border-radius: 50%;
+  border: 0; background: rgba(255,255,255,.9); font-size: 1.4rem; cursor: pointer; color: var(--ink);
+}

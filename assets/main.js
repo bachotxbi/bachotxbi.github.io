@@ -34,16 +34,42 @@
     <li class="log-entry reveal">
       <div class="log-photo${e.photo ? "" : " empty"}">
         ${e.photo ? `<img src="${esc(e.photo)}" alt="${esc(e.place)}" loading="lazy">` : ""}
-        <span class="log-no">#${String(log.length - i).padStart(2, "0")}</span>
+        <span class="log-no">#${String(i + 1).padStart(2, "0")}</span>
         <span class="log-coords">${esc(e.coords || "")}</span>
       </div>
       <div class="log-body">
         <p class="log-years">${esc(e.years)}</p>
         <h3>${rich(e.title)}</h3>
         <p class="log-org">${esc(e.org || "")}</p>
+        ${(e.details || []).length || (e.links || []).length ? `<button class="log-more" data-i="${i}">Read more →</button>` : ""}
         <p class="log-place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>${esc(e.place)}</p>
       </div>
     </li>`).join("");
+  // Panel de detalle de la bitácora
+  const lp = document.createElement("div");
+  lp.className = "log-panel";
+  lp.innerHTML = `<div class="log-sheet" role="dialog" aria-modal="true"><button class="log-close" aria-label="Close">×</button><div class="log-sheet-photo"></div><div class="log-sheet-body"></div></div>`;
+  document.body.appendChild(lp);
+  const lpClose = () => { lp.classList.remove("open"); document.body.style.overflow = ""; };
+  document.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".log-more"); if (!btn) return;
+    const e = log[+btn.dataset.i];
+    const ph = lp.querySelector(".log-sheet-photo");
+    ph.className = "log-sheet-photo" + (e.photo ? "" : " empty");
+    ph.innerHTML = (e.photo ? `<img src="${esc(e.photo)}" alt="">` : "") + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`;
+    lp.querySelector(".log-sheet-body").innerHTML = `
+      <p class="log-years">${esc(e.years)}</p>
+      <h3>${rich(e.title)}</h3>
+      <p class="log-org">${esc(e.org || "")}</p>
+      <div class="log-details">${(e.details || []).map((d) => `<p>${rich(d)}</p>`).join("")}</div>
+      ${(e.links || []).length ? `<p class="card-links">${e.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} →</a>`).join("")}</p>` : ""}
+      <p class="log-place">${esc(e.place)}</p>`;
+    lp.classList.add("open"); document.body.style.overflow = "hidden";
+  });
+  lp.querySelector(".log-close").onclick = lpClose;
+  lp.addEventListener("click", (ev) => { if (ev.target === lp) lpClose(); });
+  document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && lp.classList.contains("open")) lpClose(); });
+
   if (S.cvFile) $("cvBtn").innerHTML = `<a class="btn btn-accent" href="${esc(S.cvFile)}" target="_blank" rel="noopener">Download CV</a>`;
 
   // ---- Research ----

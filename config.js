@@ -7,56 +7,101 @@ window.SITE = {
   // --- Identidad -------------------------------------------------------
   name: "Xavier Bachot Iglesias",
   tagline: "Marine Ecologist · Underwater Videographer",
-  location: "Mallorca, Balearic Islands",
+  location: "Canary Islands, Spain",
   heroPhoto: "",            // ej. "images/hero.jpg" (foto submarina horizontal)
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
   portrait: "",             // ej. "images/me.jpg" (foto tuya, cuadrada)
 
   about: [
-    "I'm a marine ecologist working as a projects technician at the University of the Balearic Islands (UIB), in Mallorca. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
-    "I trained in Marine Sciences at the University of Las Palmas de Gran Canaria (ULPGC), spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the UIB while holding a research fellowship at IMEDEA (CSIC).",
+    "I'm a marine ecologist working as a project technician on Dive Reporter at the ECOAQUA Institute of the University of Las Palmas de Gran Canaria (ULPGC). I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
+    "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), before working as a projects technician at the UIB.",
     "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
   ],
 
   // Datos rápidos bajo la presentación
   facts: [
-    { label: "Based in", value: "Mallorca, Spain" },
+    { label: "Based in", value: "Canary Islands, Spain" },
     { label: "Diving", value: "SSI Divemaster" },
     { label: "Languages", value: "Spanish · Catalan · English · Portuguese" }
   ],
 
-  // Bitácora: tu trayectoria como un registro de inmersiones.
-  // photo: "images/xxx.jpg" (foto de esa etapa). Vacío = fondo marino con las coordenadas.
+  // Bitácora: tu trayectoria como un registro de inmersiones (la primera = #01 = la actual).
+  // photo: foto de esa etapa. details: texto ampliado que se abre en "Read more". links: enlaces externos.
   logbook: [
     {
-      years: "2025 — now", place: "Mallorca, Balearic Islands", coords: "39.57° N · 2.65° E",
-      title: "Marine ecology projects technician",
-      org: "University of the Balearic Islands (UIB)",
-      photo: ""
+      years: "2026 — now", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
+      title: "Project technician — Dive Reporter",
+      org: "ECOAQUA Institute · University of Las Palmas de Gran Canaria (ULPGC)",
+      photo: "",
+      details: [
+        "(Pending: 2–3 sentences on Dive Reporter — what the project does, what your role is, and what you work on day to day.)"
+      ],
+      links: [
+        { label: "ECOAQUA", url: "https://ecoaqua.ulpgc.es/" }
+      ]
     },
     {
-      years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.57° N · 2.65° E",
+      years: "2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
+      title: "Marine ecology projects technician",
+      org: "University of the Balearic Islands (UIB)",
+      photo: "",
+      details: [
+        "Technical support for marine ecology projects at the University of the Balearic Islands, in Mallorca."
+      ],
+      links: [
+        { label: "UIB", url: "https://www.uib.eu/" }
+      ]
+    },
+    {
+      years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "MSc in Marine Ecology",
       org: "University of the Balearic Islands (UIB) · JAE Intro research fellowship at IMEDEA (CSIC)",
-      photo: ""
+      photo: "",
+      details: [
+        "Master's degree in Marine Ecology at the University of the Balearic Islands.",
+        "In parallel I held a JAE Intro ICU research fellowship from the Spanish National Research Council (CSIC) at the Mediterranean Institute for Advanced Studies (IMEDEA), in Esporles."
+      ],
+      links: [
+        { label: "MSc in Marine Ecology (UIB)", url: "https://www.uib.eu/" },
+        { label: "IMEDEA (CSIC-UIB)", url: "https://imedea.uib-csic.es/" }
+      ]
     },
     {
       years: "2022 — 2023", place: "Florianópolis, Brazil", coords: "27.60° S · 48.52° W",
       title: "Exchange year & reef ecology research",
       org: "Federal University of Santa Catarina (UFSC) · Reef Environments Ecology Lab (LABAR)",
-      photo: ""
+      photo: "",
+      details: [
+        "An academic year at the Federal University of Santa Catarina, in southern Brazil.",
+        "Alongside my courses I volunteered as a researcher at the Reef Environments Ecology Lab (LABAR)."
+      ],
+      links: [
+        { label: "UFSC", url: "https://ufsc.br/" }
+      ]
     },
     {
-      years: "2020 — 2024", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
+      years: "2020 — 2024", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
       title: "BSc in Marine Sciences",
       org: "University of Las Palmas de Gran Canaria (ULPGC) · Research internship at ECOAQUA",
-      photo: ""
+      photo: "",
+      details: [
+        "Degree in Marine Sciences at the University of Las Palmas de Gran Canaria.",
+        "In my final year I did a research internship at the ECOAQUA Institute, the start of the work that led to my first paper on the invasive alga *Rugulopteryx okamurae*."
+      ],
+      links: [
+        { label: "Faculty of Marine Sciences (ULPGC)", url: "https://fcm.ulpgc.es/" },
+        { label: "Paper (Journal of Sea Research)", url: "https://doi.org/10.1016/j.seares.2025.102568" }
+      ]
     },
     {
       years: "2021", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
       title: "SSI Divemaster",
       org: "Divemaster internship at Karapat Dive",
-      photo: ""
+      photo: "",
+      details: [
+        "Professional diving certification with SSI, earned through a divemaster internship at Karapat Dive in Gran Canaria: guiding dives, assisting instructors and dive planning."
+      ],
+      links: []
     }
   ],
   cvFile: "",               // ej. "files/CV.pdf"
