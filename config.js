@@ -118,7 +118,6 @@ window.SITE = {
       links: [
         { label: "Contest call (ULPGC)", url: "https://biblioteca.ulpgc.es/blogs/bass/2024/05/la-delegacion-de-estudiantes-de-la-facultad-de-ciencias-del-mar-de-la-ulpgc" }
       ],
-      galleryLabel: "View photos",
       gallery: [
         { src: "images/sepia-officinalis.jpg", caption: "Camuflaje a plena luz" },
         { src: "images/vi-concurso-ganadores-full.jpg", caption: "Winners of the 6th Photography Contest" }
@@ -147,7 +146,6 @@ window.SITE = {
       org: "Student Delegation, Faculty of Marine Sciences · ULPGC",
       text: "My photograph “El misterio de Las Canteras”, a white-spotted octopus (*Octopus macropus*) peeking out from a dense meadow of green algae at Las Canteras beach (Gran Canaria), won the Marine Life category in the 5th edition of the Faculty of Marine Sciences photography contest.",
       image: "images/concurso-fotografia-2023.jpg",
-      galleryLabel: "View the winning photo",
       gallery: [
         { src: "images/misterio-de-las-canteras.jpg", caption: "El misterio de Las Canteras" }
       ],

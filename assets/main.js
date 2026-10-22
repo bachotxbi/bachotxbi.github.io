@@ -143,7 +143,7 @@
       if (a.image && a.video) extras.push(`<details class="card-more"><summary>Watch the video</summary>${yt(a.video, a.title)}</details>`);
       // Galería: cada foto puede ser "ruta.jpg" o { src: "ruta.jpg", caption: "pie de foto" }
       const gal = (a.gallery || []).map((g) => (typeof g === "string" ? { src: g } : g));
-      if (gal.length) extras.push(`<details class="card-more"><summary>${esc(a.galleryLabel || (gal.length === 1 ? "View photo" : "View photo gallery"))}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
+      if (gal.length) extras.push(`<details class="card-more"><summary>${"View photos"}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
       return `
       <article class="award-card reveal">
         ${media}
