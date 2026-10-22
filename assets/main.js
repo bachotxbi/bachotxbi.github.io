@@ -143,7 +143,7 @@
       if (a.image && a.video) extras.push(`<details class="card-more"><summary>Watch the video</summary>${yt(a.video, a.title)}</details>`);
       // Galería: cada foto puede ser "ruta.jpg" o { src: "ruta.jpg", caption: "pie de foto" }
       const gal = (a.gallery || []).map((g) => (typeof g === "string" ? { src: g } : g));
-      if (gal.length) extras.push(`<details class="card-more"><summary>${"View photos"}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" target="_blank" rel="noopener"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
+      if (gal.length) extras.push(`<details class="card-more"><summary>${"View photos"}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" class="lb-link" data-cap="${esc(g.caption || "")}"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
       return `
       <article class="award-card reveal">
         ${media}
@@ -234,6 +234,37 @@
     new IntersectionObserver((ents) => ents.forEach((e) => { if (e.isIntersecting) links.forEach((a) => a.classList.remove("current")); }),
       { threshold: .5 }).observe(document.querySelector(".hero"));
   }
+
+  // ---- Lightbox: ver fotos de las galerías a pantalla completa ----
+  const lb = document.createElement("div");
+  lb.className = "lightbox";
+  lb.innerHTML = `<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><img alt=""><p class="lb-cap"></p><button class="lb-next" aria-label="Next">›</button>`;
+  document.body.appendChild(lb);
+  let lbItems = [], lbIdx = 0;
+  const lbShow = (i) => {
+    lbIdx = (i + lbItems.length) % lbItems.length;
+    const a = lbItems[lbIdx];
+    lb.querySelector("img").src = a.getAttribute("href");
+    lb.querySelector(".lb-cap").innerHTML = rich(a.dataset.cap || "");
+  };
+  const lbClose = () => { lb.classList.remove("open"); document.body.style.overflow = ""; };
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest(".lb-link"); if (!a) return;
+    e.preventDefault();
+    lbItems = Array.from(a.closest(".card-gallery").querySelectorAll(".lb-link"));
+    lb.classList.toggle("solo", lbItems.length < 2);
+    lbShow(lbItems.indexOf(a)); lb.classList.add("open"); document.body.style.overflow = "hidden";
+  });
+  lb.querySelector(".lb-close").onclick = lbClose;
+  lb.querySelector(".lb-prev").onclick = (e) => { e.stopPropagation(); lbShow(lbIdx - 1); };
+  lb.querySelector(".lb-next").onclick = (e) => { e.stopPropagation(); lbShow(lbIdx + 1); };
+  lb.addEventListener("click", (e) => { if (e.target === lb) lbClose(); });
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") lbClose();
+    if (e.key === "ArrowRight") lbShow(lbIdx + 1);
+    if (e.key === "ArrowLeft") lbShow(lbIdx - 1);
+  });
 
   let io;
   function observe() {
