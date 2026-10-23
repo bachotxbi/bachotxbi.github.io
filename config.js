@@ -13,7 +13,7 @@ window.SITE = {
   portrait: "",             // ej. "images/me.jpg" (foto tuya, cuadrada)
 
   about: [
-    "I'm a marine ecologist and projects technician in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work on Dive Reporter, a citizen-science platform with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
+    "I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on Dive Reporter, a monitoring network built with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
     "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), before working as a projects technician at the UIB.",
     "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
   ],
@@ -29,24 +29,35 @@ window.SITE = {
   // photo: foto de esa etapa. details: texto ampliado que se abre en "Read more". links: enlaces externos.
   logbook: [
     {
-      years: "2026 — now", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
-      title: "Projects technician, ECOAQUA",
-      org: "Biodiversity and Conservation group (BIOCON) · ECOAQUA Institute, University of Las Palmas de Gran Canaria",
+      years: "Mar 2026 — now", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
+      title: "Project technician, ECOAQUA",
+      org: "Dive Reporter-MAC · BIOCON group, ECOAQUA Institute, University of Las Palmas de Gran Canaria",
       photo: "images/log-dive-reporter.jpg",
       panelPhoto: "images/log-dive-reporter-centre.jpg",   // foto dentro de "Read more"
       panelPhotoCaption: "Setting up Dive Reporter with a partner dive centre",
+      // Ficha rápida dentro de "Read more"
+      stats: [
+        { label: "Project", value: "Dive Reporter-MAC" },
+        { label: "Region", value: "Madeira · Azores · Canary Islands" },
+        { label: "Dive centres", value: "~20" },
+        { label: "Funding", value: "Interreg MAC 2021–2027" }
+      ],
       details: [
-        "I support the expansion of Dive Reporter across Macaronesia: a citizen-science platform where dive centres record bioindicator species during their dives, creating a long-term picture of how coastal ecosystems are changing.",
-        "My work connects dive centres, scientists and institutions:",
-        [
-          "Rolling out the platform in selected dive centres and helping them adopt it in daily operations.",
-          "Training instructors and guides to identify bioindicator species and to use the app underwater.",
-          "Adapting the regional species lists together with local scientific partners.",
-          "Following up with around 20 dive centres, keeping them active and solving technical questions.",
-          "Running basic quality control (QA/QC) on the submitted data and coordinating regular reviews with the science teams.",
-          "Helping produce and review the platform's automatic reports.",
-          "Tracking trends in the recorded species to help detect ecological change."
-        ]
+        "Dive Reporter turns recreational dives into data. Dive centres log a short list of bioindicator species on every dive, and over time those records become a low-cost, long-term picture of how coastal ecosystems are changing. My job is to help that network grow across Macaronesia.",
+        { heading: "With the dive centres", items: [
+          "Rolling out the platform in new centres and fitting it into their daily routine.",
+          "Training instructors and guides to identify bioindicator species and log them underwater.",
+          "Following up with around 20 centres, keeping them active and solving technical questions."
+        ]},
+        { heading: "With the data", items: [
+          "Quality control (QA/QC) of the records and regular reviews with the science teams.",
+          "Adapting the regional species lists with local scientific partners.",
+          "Reviewing the platform's automatic reports and tracking trends that may signal ecological change."
+        ]},
+        { heading: "Beyond the platform", items: [
+          "Statistical analyses for ongoing studies in the BIOCON group.",
+          "Joining field sampling campaigns at sea."
+        ]}
       ],
       links: [
         { label: "Dive Reporter", url: "https://www.dive-reporter.org/" },

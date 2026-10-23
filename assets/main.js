@@ -78,7 +78,11 @@
       <p class="log-years">${esc(e.years)}</p>
       <h3>${rich(e.title)}</h3>
       <p class="log-org">${esc(e.org || "")}</p>
-      <div class="log-details">${(e.details || []).map((d) => Array.isArray(d) ? `<ul>${d.map((x) => `<li>${rich(x)}</li>`).join("")}</ul>` : `<p>${rich(d)}</p>`).join("")}</div>
+      ${(e.stats || []).length ? `<dl class="log-stats">${e.stats.map((st) => `<div><dt>${esc(st.label)}</dt><dd>${esc(st.value)}</dd></div>`).join("")}</dl>` : ""}
+      <div class="log-details">${(e.details || []).map((d) =>
+        Array.isArray(d) ? `<ul>${d.map((x) => `<li>${rich(x)}</li>`).join("")}</ul>`
+        : (d && d.items) ? `<h4>${esc(d.heading || "")}</h4><ul>${d.items.map((x) => `<li>${rich(x)}</li>`).join("")}</ul>`
+        : `<p>${rich(d)}</p>`).join("")}</div>
       ${(e.links || []).length ? `<p class="card-links">${e.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} →</a>`).join("")}</p>` : ""}
       <p class="log-place">${esc(e.place)}</p>`;
     lp.classList.add("open"); document.body.style.overflow = "hidden";
