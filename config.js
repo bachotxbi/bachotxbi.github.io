@@ -14,7 +14,7 @@ window.SITE = {
 
   about: [
     "I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on Dive Reporter, a monitoring network built with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
-    "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), before working as a projects technician at the UIB.",
+    "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), and then stayed on as a project technician at IMEDEA.",
     "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
   ],
 
@@ -66,15 +66,33 @@ window.SITE = {
       ]
     },
     {
-      years: "2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
-      title: "Projects technician, UIB",
-      org: "Marine ecology projects · University of the Balearic Islands",
-      photo: "",
+      years: "Aug 2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
+      title: "Project technician, IMEDEA",
+      org: "Marine ecology projects · Global Change Research, IMEDEA (CSIC-UIB) · contracted through the UIB",
+      photo: "images/log-imedea-snorkel.jpg",
+      panelPhoto: "images/log-imedea-boat.jpg",
+      panelPhotoCaption: "Heading back after a day of fieldwork",
+      stats: [
+        { label: "Institute", value: "IMEDEA (CSIC-UIB)" },
+        { label: "Lab", value: "Dr. Andrea Antón" },
+        { label: "Fieldwork", value: "Snorkelling & diving" },
+        { label: "Funding", value: "Spanish Research Agency (AEI)" }
+      ],
       details: [
-        "Technical support for marine ecology projects at the University of the Balearic Islands, in Mallorca."
+        "A research technician post in Dr. Andrea Antón's lab at the Mediterranean Institute for Advanced Studies, working on marine ecology projects alongside master's and PhD students. Most of the fieldwork took place in shallow waters around the Balearic Islands.",
+        { heading: "In the field", items: [
+          "Snorkel surveys and occasional dives to collect ecological data.",
+          "Planning and running sampling days with the rest of the team."
+        ]},
+        { heading: "At the desk", items: [
+          "Organising and curating field datasets.",
+          "Statistical analyses and scientific figures.",
+          "Contributing to the writing of scientific texts."
+        ]}
       ],
       links: [
-        { label: "UIB", url: "https://www.uib.eu/" }
+        { label: "IMEDEA", url: "https://imedea.uib-csic.es/" },
+        { label: "Global Change Research", url: "https://imedea.uib-csic.es/ca/investigacio/investigacion-del-canvi-global/" }
       ]
     },
     {
