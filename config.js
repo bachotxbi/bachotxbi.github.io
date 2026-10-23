@@ -104,13 +104,42 @@ window.SITE = {
       ]
     },
     {
+      years: "Nov 2024 — Jul 2025", place: "Mallorca, Balearic Islands", coords: "39.67° N · 2.58° E",
+      title: "JAE Intro research fellow, IMEDEA",
+      org: "CSIC JAE Intro ICU fellowship · Physical Oceanography and Climate group, IMEDEA (CSIC-UIB)",
+      photo: "images/logo-jae-intro.png", photoType: "logo",
+      panelPhotos: [
+        { src: "images/log-jae-seminar.jpg", caption: "Presenting my results at an IMEDEA research seminar" }
+      ],
+      stats: [
+        { label: "Institute", value: "IMEDEA (CSIC-UIB)" },
+        { label: "Supervisor", value: "Dr. Ismael Hernández and Dr. Alejandro Orfila" },
+        { label: "Fieldwork", value: "Ocean data and numerical modelling" },
+        { label: "Funding", value: "CSIC · JAE Intro ICU 2024" }
+      ],
+      details: [
+        "A CSIC research-introduction fellowship in the Physical Oceanography and Climate group, within the training plan “Preferential concentration of microplastics in the water column and its impact on marine ecosystems”.",
+        "Most models treat microplastics as passive, weightless particles. We simulated them with real sizes and densities to see where in the Mediterranean they actually accumulate, which led to a classification of the basin into accumulation regions and the identification of pollution hotspots.",
+        { heading: "What I did", items: [
+          "Processed in-situ and satellite data on plastic concentrations and ocean variables (currents, temperature, salinity, chlorophyll).",
+          "Simulated three-dimensional trajectories of microplastics of different sizes and densities.",
+          "Analysed the results with statistical and machine-learning methods.",
+          "Presented the work at an IMEDEA research seminar; it became my master's thesis, “The Mediterranean Sea as a trap: flow structures and accumulation of floating debris”."
+        ]}
+      ],
+      links: [
+        { label: "JAE Intro (CSIC)", url: "https://www.csic.es/es/formacion-y-empleo/becas-jae-intro" },
+        { label: "IMEDEA", url: "https://imedea.uib-csic.es/" }
+      ]
+    },
+    {
       years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "MSc in Marine Ecology, UIB",
-      org: "University of the Balearic Islands · JAE Intro research fellowship at IMEDEA (CSIC)",
+      org: "University of the Balearic Islands · Master's thesis at IMEDEA (CSIC-UIB)",
       photo: "",
       details: [
         "Master's degree in Marine Ecology at the University of the Balearic Islands.",
-        "In parallel I held a JAE Intro ICU research fellowship from the Spanish National Research Council (CSIC) at the Mediterranean Institute for Advanced Studies (IMEDEA), in Esporles."
+        "My master's thesis, “The Mediterranean Sea as a trap: flow structures and accumulation of floating debris”, grew out of my JAE Intro fellowship at IMEDEA (see #03)."
       ],
       links: [
         { label: "MSc in Marine Ecology (UIB)", url: "https://www.uib.eu/" },
