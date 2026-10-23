@@ -75,7 +75,7 @@ window.SITE = {
     {
       years: "Aug 2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "Project technician, IMEDEA",
-      org: "Marine ecology projects · Global Change Research, IMEDEA (CSIC-UIB) · contracted through the UIB",
+      org: "Marine ecology projects · Global Change Research, IMEDEA (CSIC-UIB)",
       photo: "images/logo-imedea.png", photoType: "logo",
       panelPhotos: [
         { src: "images/log-imedea-snorkel.jpg", caption: "Snorkel fieldwork in Formentera" },
