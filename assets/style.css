@@ -469,3 +469,15 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .sl-dots { position: absolute; z-index: 3; left: 0; right: 0; bottom: 38px; display: flex; justify-content: center; gap: 7px; }
 .sl-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; }
 .sl-dots span.on { background: #fff; }
+
+/* ---------- Recognition galleries as a slideshow ---------- */
+.card-gallery.cg-slider { display: block; }
+.cg-stage { position: relative; aspect-ratio: 4/3; background: #0b1d27; border-radius: 10px; overflow: hidden; }
+.cg-slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+.cg-slide.on { opacity: 1; pointer-events: auto; }
+.cg-slide a, .cg-slide img { display: block; width: 100%; height: 100%; }
+.card-gallery .cg-slide img { object-fit: contain; border-radius: 0; max-height: none; background: none; }
+.cg-stage .sl-arrow { width: 38px; height: 38px; font-size: 1.5rem; }
+.cg-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 8px; }
+.cg-cap { font-size: .85rem; color: var(--muted); margin: 0; }
+.cg-count { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }

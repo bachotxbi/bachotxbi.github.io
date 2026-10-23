@@ -211,7 +211,7 @@
       if (a.image && a.video) extras.push(`<details class="card-more"><summary>Watch the video</summary>${yt(a.video, a.title)}</details>`);
       // Galería: cada foto puede ser "ruta.jpg" o { src: "ruta.jpg", caption: "pie de foto" }
       const gal = (a.gallery || []).map((g) => (typeof g === "string" ? { src: g } : g));
-      if (gal.length) extras.push(`<details class="card-more"><summary>${"View photos"}</summary><div class="card-gallery${gal.length === 1 ? " single" : ""}">${gal.map((g) => `<figure><a href="${esc(g.src)}" class="lb-link" data-cap="${esc(g.caption || "")}"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a>${g.caption ? `<figcaption>${rich(g.caption)}</figcaption>` : ""}</figure>`).join("")}</div></details>`);
+      if (gal.length) extras.push(`<details class="card-more"><summary>View photos</summary><div class="card-gallery cg-slider${gal.length === 1 ? " single" : ""}"><div class="cg-stage">${gal.map((g, k) => `<figure class="cg-slide${k ? "" : " on"}"><a href="${esc(g.src)}" class="lb-link" data-cap="${esc(g.caption || "")}"><img src="${esc(g.src)}" alt="${esc(String(g.caption || "").replace(/\*/g, ""))}" loading="lazy"></a></figure>`).join("")}${gal.length > 1 ? `<button class="sl-arrow sl-prev" aria-label="Previous photo">‹</button><button class="sl-arrow sl-next" aria-label="Next photo">›</button>` : ""}</div><div class="cg-foot"><p class="cg-cap">${rich(gal[0].caption || "")}</p>${gal.length > 1 ? `<span class="cg-count">1 / ${gal.length}</span>` : ""}</div></div></details>`);
       return `
       <article class="award-card reveal">
         ${media}
@@ -302,6 +302,25 @@
     new IntersectionObserver((ents) => ents.forEach((e) => { if (e.isIntersecting) links.forEach((a) => a.classList.remove("current")); }),
       { threshold: .5 }).observe(document.querySelector(".hero"));
   }
+
+  // ---- Galerías de Recognition: una foto cada vez, flechas y paso automático (5 s)
+  document.querySelectorAll(".cg-slider").forEach((g) => {
+    const slides = Array.from(g.querySelectorAll(".cg-slide")); if (slides.length < 2) return;
+    const caps = slides.map((f) => f.querySelector(".lb-link").dataset.cap || "");
+    let i = 0, timer = null;
+    const go = (k) => {
+      i = (k + slides.length) % slides.length;
+      slides.forEach((f, j) => f.classList.toggle("on", j === i));
+      g.querySelector(".cg-cap").innerHTML = rich(caps[i]);
+      g.querySelector(".cg-count").textContent = `${i + 1} / ${slides.length}`;
+    };
+    const stop = () => clearInterval(timer);
+    const start = () => { stop(); if (g.closest("details").open) timer = setInterval(() => go(i + 1), 5000); };
+    g.querySelector(".sl-next").onclick = (e) => { e.preventDefault(); go(i + 1); start(); };
+    g.querySelector(".sl-prev").onclick = (e) => { e.preventDefault(); go(i - 1); start(); };
+    g.addEventListener("mouseenter", stop); g.addEventListener("mouseleave", start);
+    g.closest("details").addEventListener("toggle", start);
+  });
 
   // ---- Lightbox: ver fotos de las galerías a pantalla completa ----
   const lb = document.createElement("div");
