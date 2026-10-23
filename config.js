@@ -128,7 +128,8 @@ window.SITE = {
         ]}
       ],
       links: [
-        { label: "JAE Intro (CSIC)", url: "https://www.csic.es/es/formacion-y-empleo/becas-jae-intro" },
+        { label: "JAE Intro (CSIC)", url: "https://www.csic.es/es/formacion-y-empleo/formacion-de-personal-investigador/grado/becas-de-introduccion" },
+        { label: "Physical Oceanography and Climate group", url: "https://imedea.uib-csic.es/investigacion/tecnologias-marinas-oceanografia-operacional-y-costera/" },
         { label: "IMEDEA", url: "https://imedea.uib-csic.es/" }
       ]
     },
