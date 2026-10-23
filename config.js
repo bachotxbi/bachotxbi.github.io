@@ -39,8 +39,7 @@ window.SITE = {
         { src: "images/log-dive-reporter-centre.jpg", caption: "Setting up Dive Reporter with a partner dive centre" },
         { src: "images/log-dr-centre-2.jpg", caption: "Training dive-centre staff to log species with the app" },
         { src: "images/log-dr-centre-3.jpg", caption: "Meeting with a partner dive centre" },
-        { src: "images/log-dr-centre-4.jpg", caption: "Visiting a partner dive centre" },
-        { src: "images/log-dive-reporter.jpg", caption: "Dive Reporter · a low-cost long-term monitoring program" }
+        { src: "images/log-dr-centre-4.jpg", caption: "Visiting a partner dive centre" }
       ],
       // Ficha rápida (mismas 4 casillas en todas): Institute · Supervisor · Fieldwork · Funding
       stats: [
