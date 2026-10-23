@@ -45,8 +45,8 @@ window.SITE = {
       // Ficha rápida (mismas 4 casillas en todas): Institute · Supervisor · Fieldwork · Funding
       stats: [
         { label: "Institute", value: "ECOAQUA (ULPGC)" },
-        { label: "Supervisor", value: "" },
-        { label: "Fieldwork", value: "Dive centres · Macaronesia" },
+        { label: "Supervisor", value: "Dr. Rodrigo Riera" },
+        { label: "Fieldwork", value: "Dive centres" },
         { label: "Funding", value: "Interreg MAC 2021–2027" }
       ],
       details: [
@@ -78,13 +78,13 @@ window.SITE = {
       org: "Marine ecology projects · Global Change Research, IMEDEA (CSIC-UIB) · contracted through the UIB",
       photo: "images/logo-imedea.png", photoType: "logo",
       panelPhotos: [
-        { src: "images/log-imedea-snorkel.jpg", caption: "Snorkel fieldwork in the Balearic Islands" },
+        { src: "images/log-imedea-snorkel.jpg", caption: "Snorkel fieldwork in Formentera" },
         { src: "images/log-imedea-boat.jpg", caption: "Heading back after a day of fieldwork" }
       ],
       stats: [
         { label: "Institute", value: "IMEDEA (CSIC-UIB)" },
         { label: "Supervisor", value: "Dr. Andrea Antón" },
-        { label: "Fieldwork", value: "Snorkelling & diving · Balearic Islands" },
+        { label: "Fieldwork", value: "Snorkelling and diving" },
         { label: "Funding", value: "Spanish Research Agency (AEI)" }
       ],
       details: [
