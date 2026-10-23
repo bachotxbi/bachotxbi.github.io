@@ -137,7 +137,7 @@ window.SITE = {
       years: "Oct 2024 — Sep 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "MSc in Marine Ecology, UIB",
       org: "University of the Balearic Islands · Master's thesis and internship at IMEDEA (CSIC-UIB)",
-      photo: "images/log-msc-quadrat.jpg",
+      photo: "images/logo-mecm.png", photoType: "logo",
       panelPhotos: [
         { src: "images/log-msc-quadrat.jpg", caption: "Quadrat survey during the scientific diving course" },
         { src: "images/log-msc-boat-menorca.jpg", caption: "Water sampling from the boat, Menorca" },
@@ -147,12 +147,12 @@ window.SITE = {
       ],
       stats: [
         { label: "Institute", value: "University of the Balearic Islands" },
-        { label: "Supervisor", value: "Dr. Ismael Hernández and Dr. Alejandro Orfila" },
-        { label: "Fieldwork", value: "Snorkelling and scientific diving" },
-        { label: "Funding", value: "" }
+        { label: "School", value: "Centre d'Estudis de Postgrau (CEP)" },
+        { label: "Master's director", value: "Dr. Nona Sheila Agawin Romualdo" },
+        { label: "Thesis supervisors", value: "Dr. Ismael Hernández and Dr. Alejandro Orfila" }
       ],
       details: [
-        "A one-year master's programme in Marine Ecology at the University of the Balearic Islands, directed by Dr. Nona Sheila Agawin Romualdo, with field trips and practical courses around Mallorca and Menorca.",
+        "A one-year master's programme in Marine Ecology at the University of the Balearic Islands, with field trips and practical courses around Mallorca and Menorca.",
         { heading: "Master's thesis", items: [
           "“The Mediterranean Sea as a trap: flow structures and accumulation of floating particles”, carried out at IMEDEA (CSIC-UIB) under the supervision of Dr. Ismael Hernández and Dr. Alejandro Orfila."
         ]},
@@ -165,6 +165,7 @@ window.SITE = {
       ],
       links: [
         { label: "MSc in Marine Ecology (UIB)", url: "https://www.uib.eu/Learn/estudis-de-master/master/MEC2/" },
+        { label: "Physical Oceanography and Climate group", url: "https://imedea.uib-csic.es/investigacion/tecnologias-marinas-oceanografia-operacional-y-costera/" },
         { label: "IMEDEA", url: "https://imedea.uib-csic.es/" }
       ]
     },
