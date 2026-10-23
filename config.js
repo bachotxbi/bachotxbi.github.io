@@ -100,7 +100,7 @@ window.SITE = {
       ],
       links: [
         { label: "IMEDEA", url: "https://imedea.uib-csic.es/" },
-        { label: "Global Change Research", url: "https://imedea.uib-csic.es/ca/investigacio/investigacion-del-canvi-global/" }
+        { label: "Global Change Research group", url: "https://imedea.uib-csic.es/ca/investigacio/investigacion-del-canvi-global/" }
       ]
     },
     {
