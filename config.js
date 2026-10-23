@@ -124,7 +124,7 @@ window.SITE = {
           "Processed in-situ and satellite data on plastic concentrations and ocean variables (currents, temperature, salinity, chlorophyll).",
           "Simulated three-dimensional trajectories of microplastics of different sizes and densities.",
           "Analysed the results with statistical and machine-learning methods.",
-          "Presented the work at an IMEDEA research seminar; it became my master's thesis, “The Mediterranean Sea as a trap: flow structures and accumulation of floating debris”."
+          "Presented the work at an IMEDEA research seminar; it became my master's thesis, “The Mediterranean Sea as a trap: flow structures and accumulation of floating particles”."
         ]}
       ],
       links: [
@@ -134,17 +134,38 @@ window.SITE = {
       ]
     },
     {
-      years: "2024 — 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
+      years: "Oct 2024 — Sep 2025", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "MSc in Marine Ecology, UIB",
-      org: "University of the Balearic Islands · Master's thesis at IMEDEA (CSIC-UIB)",
-      photo: "",
+      org: "University of the Balearic Islands · Master's thesis and internship at IMEDEA (CSIC-UIB)",
+      photo: "images/log-msc-quadrat.jpg",
+      panelPhotos: [
+        { src: "images/log-msc-quadrat.jpg", caption: "Quadrat survey during the scientific diving course" },
+        { src: "images/log-msc-boat-menorca.jpg", caption: "Water sampling from the boat, Menorca" },
+        { src: "images/log-msc-team-menorca.jpg", caption: "Field trip team, Menorca" },
+        { src: "images/log-msc-snorkel.jpg", caption: "Snorkel survey practice" },
+        { src: "images/log-msc-dive-team.jpg", caption: "Back at the surface after a scientific dive" }
+      ],
+      stats: [
+        { label: "Institute", value: "University of the Balearic Islands" },
+        { label: "Supervisor", value: "Dr. Ismael Hernández and Dr. Alejandro Orfila" },
+        { label: "Fieldwork", value: "Snorkelling and scientific diving" },
+        { label: "Funding", value: "" }
+      ],
       details: [
-        "Master's degree in Marine Ecology at the University of the Balearic Islands.",
-        "My master's thesis, “The Mediterranean Sea as a trap: flow structures and accumulation of floating debris”, grew out of my JAE Intro fellowship at IMEDEA (see #03)."
+        "A one-year master's programme in Marine Ecology at the University of the Balearic Islands, directed by Dr. Nona Sheila Agawin Romualdo, with field trips and practical courses around Mallorca and Menorca.",
+        { heading: "Master's thesis", items: [
+          "“The Mediterranean Sea as a trap: flow structures and accumulation of floating particles”, carried out at IMEDEA (CSIC-UIB) under the supervision of Dr. Ismael Hernández and Dr. Alejandro Orfila."
+        ]},
+        { heading: "Internship", items: [
+          "External internship in the Physical Oceanography and Climate group at IMEDEA, within the LAMARCA project on the preferential concentration of microplastics in the water column (see #03)."
+        ]},
+        { heading: "Scientific diving", items: [
+          "University Microcredential in Scientific Diving (3 ECTS), University of the Balearic Islands, 2025."
+        ]}
       ],
       links: [
-        { label: "MSc in Marine Ecology (UIB)", url: "https://www.uib.eu/" },
-        { label: "IMEDEA (CSIC-UIB)", url: "https://imedea.uib-csic.es/" }
+        { label: "MSc in Marine Ecology (UIB)", url: "https://www.uib.eu/Learn/estudis-de-master/master/MEC2/" },
+        { label: "IMEDEA", url: "https://imedea.uib-csic.es/" }
       ]
     },
     {

@@ -481,3 +481,5 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .cg-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 8px; }
 .cg-cap { font-size: .85rem; color: var(--muted); margin: 0; }
 .cg-count { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.log-stats > div:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+.log-stats > div:nth-last-child(2):nth-child(odd) { border-bottom: 1px solid #e3e9e9; }
