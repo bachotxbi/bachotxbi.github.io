@@ -99,7 +99,7 @@
       <p class="log-years">${esc(e.years)}</p>
       <h3>${rich(e.title)}</h3>
       <p class="log-org">${esc(e.org || "")}</p>
-      ${(e.stats || []).length ? `<dl class="log-stats">${e.stats.map((st) => `<div><dt>${esc(st.label)}</dt><dd>${esc(st.value)}</dd></div>`).join("")}</dl>` : ""}
+      ${(e.stats || []).length ? `<dl class="log-stats">${e.stats.filter((st) => st.value).map((st) => `<div><dt>${esc(st.label)}</dt><dd>${esc(st.value)}</dd></div>`).join("")}</dl>` : ""}
       <div class="log-details">${(e.details || []).map((d) =>
         Array.isArray(d) ? `<ul>${d.map((x) => `<li>${rich(x)}</li>`).join("")}</ul>`
         : (d && d.items) ? `<h4>${esc(d.heading || "")}</h4><ul>${d.items.map((x) => `<li>${rich(x)}</li>`).join("")}</ul>`

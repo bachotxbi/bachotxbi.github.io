@@ -35,14 +35,18 @@ window.SITE = {
       photo: "images/log-dive-reporter.jpg",
       // Fotos de cabecera en "Read more" (pasan solas cada 5 s; con flechas)
       panelPhotos: [
+        { src: "images/log-dr-workshop-madeira.jpg", caption: "First Dive Reporter-MAC workshop, Madeira" },
         { src: "images/log-dive-reporter-centre.jpg", caption: "Setting up Dive Reporter with a partner dive centre" },
+        { src: "images/log-dr-centre-2.jpg", caption: "Training dive-centre staff to log species with the app" },
+        { src: "images/log-dr-centre-3.jpg", caption: "Meeting with a partner dive centre" },
+        { src: "images/log-dr-centre-4.jpg", caption: "Visiting a partner dive centre" },
         { src: "images/log-dive-reporter.jpg", caption: "Dive Reporter · a low-cost long-term monitoring program" }
       ],
-      // Ficha rápida dentro de "Read more"
+      // Ficha rápida (mismas 4 casillas en todas): Institute · Supervisor · Fieldwork · Funding
       stats: [
-        { label: "Project", value: "Dive Reporter-MAC" },
-        { label: "Region", value: "Madeira · Azores · Canary Islands" },
-        { label: "Dive centres", value: "~20" },
+        { label: "Institute", value: "ECOAQUA (ULPGC)" },
+        { label: "Supervisor", value: "" },
+        { label: "Fieldwork", value: "Dive centres · Macaronesia" },
         { label: "Funding", value: "Interreg MAC 2021–2027" }
       ],
       details: [
@@ -79,8 +83,8 @@ window.SITE = {
       ],
       stats: [
         { label: "Institute", value: "IMEDEA (CSIC-UIB)" },
-        { label: "Lab", value: "Dr. Andrea Antón" },
-        { label: "Fieldwork", value: "Snorkelling & diving" },
+        { label: "Supervisor", value: "Dr. Andrea Antón" },
+        { label: "Fieldwork", value: "Snorkelling & diving · Balearic Islands" },
         { label: "Funding", value: "Spanish Research Agency (AEI)" }
       ],
       details: [
