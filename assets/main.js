@@ -32,7 +32,7 @@
   if (!log.length) $("logbookWrap").style.display = "none";
   $("logbook").innerHTML = log.map((e, i) => `
     <li class="log-entry reveal">
-      <div class="log-photo${e.photo ? "" : " empty"}">
+      <div class="log-photo${e.photo ? "" : " empty"}${e.photoType === "logo" ? " logo" : ""}">
         ${e.photo ? `<img src="${esc(e.photo)}" alt="${esc(e.place)}" loading="lazy">` : ""}
         <span class="log-no">#${String(i + 1).padStart(2, "0")}</span>
         <span class="log-coords">${esc(e.coords || "")}</span>
@@ -65,15 +65,36 @@
   lp.className = "log-panel";
   lp.innerHTML = `<div class="log-sheet" role="dialog" aria-modal="true"><button class="log-close" aria-label="Close">×</button><div class="log-sheet-photo"></div><div class="log-sheet-body"></div></div>`;
   document.body.appendChild(lp);
-  const lpClose = () => { lp.classList.remove("open"); document.body.style.overflow = ""; };
+  let slideTimer = null, slideIdx = 0;
+  function slideGo(ph, n, k) {
+    slideIdx = (k + n) % n;
+    ph.querySelectorAll(".slide").forEach((f, j) => f.classList.toggle("on", j === slideIdx));
+    ph.querySelectorAll(".sl-dots span").forEach((d, j) => d.classList.toggle("on", j === slideIdx));
+  }
+  function slideStart(ph, n) {
+    clearInterval(slideTimer); slideIdx = 0;
+    if (n < 2) return;
+    const tick = () => slideGo(ph, n, slideIdx + 1);
+    const restart = () => { clearInterval(slideTimer); slideTimer = setInterval(tick, 5000); };
+    ph.querySelector(".sl-next").onclick = () => { slideGo(ph, n, slideIdx + 1); restart(); };
+    ph.querySelector(".sl-prev").onclick = () => { slideGo(ph, n, slideIdx - 1); restart(); };
+    ph.querySelectorAll(".sl-dots span").forEach((d, j) => d.onclick = () => { slideGo(ph, n, j); restart(); });
+    ph.onmouseenter = () => clearInterval(slideTimer);
+    ph.onmouseleave = restart;
+    restart();
+  }
+  const lpClose = () => { lp.classList.remove("open"); document.body.style.overflow = ""; clearInterval(slideTimer); };
   document.addEventListener("click", (ev) => {
     const btn = ev.target.closest(".log-more"); if (!btn) return;
     const e = log[+btn.dataset.i];
     const ph = lp.querySelector(".log-sheet-photo");
-    const pimg = e.panelPhoto || e.photo;
-    ph.className = "log-sheet-photo" + (pimg ? "" : " empty") + (e.panelPhoto ? " tall" : "");
-    ph.innerHTML = (pimg ? `<img src="${esc(pimg)}" alt="${esc(e.panelPhotoCaption || "")}">` : "")
-      + (e.panelPhotoCaption ? `<span class="log-cap">${esc(e.panelPhotoCaption)}</span>` : "") + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`;
+    let slides = e.panelPhotos || (e.panelPhoto ? [{ src: e.panelPhoto, caption: e.panelPhotoCaption }] : []);
+    if (!slides.length && e.photo && e.photoType !== "logo") slides = [{ src: e.photo }];
+    ph.className = "log-sheet-photo" + (slides.length ? " tall" : " empty") + (slides.length > 1 ? " multi" : "");
+    ph.innerHTML = slides.map((sl, k) => `<figure class="slide${k ? "" : " on"}"><img src="${esc(sl.src)}" alt="${esc(sl.caption || "")}">${sl.caption ? `<figcaption class="log-cap">${esc(sl.caption)}</figcaption>` : ""}</figure>`).join("")
+      + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`
+      + (slides.length > 1 ? `<button class="sl-arrow sl-prev" aria-label="Previous photo">‹</button><button class="sl-arrow sl-next" aria-label="Next photo">›</button><div class="sl-dots">${slides.map((_, k) => `<span class="${k ? "" : "on"}"></span>`).join("")}</div>` : "");
+    slideStart(ph, slides.length);
     lp.querySelector(".log-sheet-body").innerHTML = `
       <p class="log-years">${esc(e.years)}</p>
       <h3>${rich(e.title)}</h3>

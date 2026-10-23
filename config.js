@@ -33,8 +33,11 @@ window.SITE = {
       title: "Project technician, ECOAQUA",
       org: "Dive Reporter-MAC · BIOCON group, ECOAQUA Institute, University of Las Palmas de Gran Canaria",
       photo: "images/log-dive-reporter.jpg",
-      panelPhoto: "images/log-dive-reporter-centre.jpg",   // foto dentro de "Read more"
-      panelPhotoCaption: "Setting up Dive Reporter with a partner dive centre",
+      // Fotos de cabecera en "Read more" (pasan solas cada 5 s; con flechas)
+      panelPhotos: [
+        { src: "images/log-dive-reporter-centre.jpg", caption: "Setting up Dive Reporter with a partner dive centre" },
+        { src: "images/log-dive-reporter.jpg", caption: "Dive Reporter · a low-cost long-term monitoring program" }
+      ],
       // Ficha rápida dentro de "Read more"
       stats: [
         { label: "Project", value: "Dive Reporter-MAC" },
@@ -69,9 +72,11 @@ window.SITE = {
       years: "Aug 2025 — 2026", place: "Mallorca, Balearic Islands", coords: "39.64° N · 2.65° E",
       title: "Project technician, IMEDEA",
       org: "Marine ecology projects · Global Change Research, IMEDEA (CSIC-UIB) · contracted through the UIB",
-      photo: "images/log-imedea-snorkel.jpg",
-      panelPhoto: "images/log-imedea-boat.jpg",
-      panelPhotoCaption: "Heading back after a day of fieldwork",
+      photo: "images/logo-imedea.png", photoType: "logo",
+      panelPhotos: [
+        { src: "images/log-imedea-snorkel.jpg", caption: "Snorkel fieldwork in the Balearic Islands" },
+        { src: "images/log-imedea-boat.jpg", caption: "Heading back after a day of fieldwork" }
+      ],
       stats: [
         { label: "Institute", value: "IMEDEA (CSIC-UIB)" },
         { label: "Lab", value: "Dr. Andrea Antón" },
