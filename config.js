@@ -238,22 +238,26 @@ window.SITE = {
       org: "Higher Technician in mechanical manufacturing (two qualifications) · Senior industrial designer at Talleres Moldesa",
       photo: "",
       stats: [
-        { label: "Field", value: "Mechanical manufacturing" },
+        { label: "School", value: "Escola Industrial de Sabadell" },
+        { label: "Internships", value: "ALBA Synchrotron and Talleres Moldesa" },
         { label: "Role", value: "Senior industrial designer" },
-        { label: "Company", value: "Talleres Moldesa S.L." },
-        { label: "Years", value: "2016 — 2020" }
+        { label: "Company", value: "Talleres Moldesa S.L. (2016 — 2020)" }
       ],
       details: [
         "Before marine science, I trained and worked in engineering. That background still shapes how I work today: programming, modelling, technical problem-solving and a careful eye for data.",
         { heading: "Training", items: [
-          "Higher Technician in Mechanical Manufacturing Design (Técnico Superior).",
-          "Higher Technician in Production Planning for Mechanical Manufacturing (Técnico Superior)."
+          "Higher Technician in Production Planning for Mechanical Manufacturing (Técnico Superior), with a one-year internship at the ALBA Synchrotron.",
+          "Higher Technician in Mechanical Manufacturing Design (Técnico Superior), with a one-year internship at Talleres Moldesa."
         ]},
         { heading: "Work", items: [
-          "Four years as a senior industrial designer at Talleres Moldesa, in Sabadell, before leaving to study Marine Sciences in Gran Canaria."
+          "After the internship, Talleres Moldesa kept me on: four years as a senior industrial designer in Sabadell, before I left to study Marine Sciences in Gran Canaria."
         ]}
       ],
-      links: []
+      links: [
+        { label: "Design qualification", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-2/" },
+        { label: "Production planning qualification", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-3/" },
+        { label: "ALBA Synchrotron", url: "https://www.cells.es/es" }
+      ]
     }
   ],
   cvFile: "",               // ej. "files/CV.pdf"
