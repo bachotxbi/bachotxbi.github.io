@@ -14,9 +14,9 @@ window.SITE = {
 
   about: [
     "I grew up in **Barcelona** as the kid who turned over every rock to see what was living underneath. Science was always my subject, and Biology was the plan, but my grades didn't quite get me there. So I took the practical route: I trained in [**mechanical engineering**](#log-7) and spent several years designing industrial parts.",
-    "The sea kept pulling, though. I went back to university to study [Marine Sciences in Gran Canaria](#log-6), spent [a year on reef ecology in Brazil](#log-5), and completed [an MSc in Marine Ecology in Mallorca](#log-4), working at [IMEDEA (CSIC)](#log-2) along the way.",
-    "Today I'm a [**marine ecologist**](#log-4) in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work on [**Dive Reporter**](#log-1), a monitoring network built with dive centres across Macaronesia. I'm interested in how **coastal ecosystems** change and how they respond to pressures such as invasive species and pollution.",
-    "I'm still a maker at heart: I converted my own campervan with my family, and I rarely dive without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface."
+    "The sea kept pulling, though, and when I went back to university one theme kept finding me: **invasive species**. I studied the alga *Rugulopteryx okamurae* and its effect on coastal fish during my [Marine Sciences degree in Gran Canaria](#log-6), worked on the invasive sun coral *Tubastraea coccinea* during [a year in Brazil](#log-5), and in Mallorca, between [my MSc in Marine Ecology](#log-4) and [IMEDEA (CSIC)](#log-2), on the crab *Percnon gibbesi* and the green alga *Batophora*.",
+    "Today I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on the [**Dive Reporter**](#log-1) project, building a monitoring network with dive centres across Macaronesia to track how coastal ecosystems are changing.",
+    "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface."
   ],
 
   // Datos rápidos bajo la presentación
@@ -265,7 +265,7 @@ window.SITE = {
   cvFile: "",               // ej. "files/CV.pdf"
 
   // --- Investigación ---------------------------------------------------
-  researchInterests: ["Marine ecology", "Macroalgae", "Coastal ecosystems", "Underwater imaging"],
+  researchInterests: ["Invasive species", "Coastal ecosystems", "Marine ecology", "Citizen science", "Scientific diving", "Underwater imaging"],
 
   // Si pones tu ORCID, las publicaciones se cargan solas desde ORCID.
   orcid: "0009-0006-6342-0274",
