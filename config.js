@@ -10,7 +10,8 @@ window.SITE = {
   location: "Canary Islands, Spain",
   heroPhoto: "images/hero-poster.jpg",   // se ve mientras carga el vídeo
   heroVideo: "media/hero-1080.mp4",      // vídeo de fondo (sin sonido, en bucle)
-  heroVideoMobile: "media/hero-720.mp4", // versión ligera para móvil
+  heroVideoMobile: "media/hero-vertical.mp4",        // vídeo vertical para pantallas en vertical (móvil)
+  heroPhotoMobile: "images/hero-poster-vertical.jpg",
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
   portrait: "images/portrait.jpg",
 

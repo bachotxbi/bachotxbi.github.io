@@ -14,11 +14,13 @@
   // ---- Hero media ----
   const hero = $("heroMedia");
   if (S.heroVideo) {
-    const small = window.matchMedia("(max-width: 900px)").matches && S.heroVideoMobile;
+    // Pantalla en vertical (móvil) → vídeo vertical; en horizontal (ordenador, tablet apaisada) → vídeo horizontal
+    const portrait = window.matchMedia("(orientation: portrait)").matches && S.heroVideoMobile;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    hero.innerHTML = reduce && S.heroPhoto
-      ? `<img src="${esc(S.heroPhoto)}" alt="">`
-      : `<video autoplay muted loop playsinline preload="auto" poster="${esc(S.heroPhoto || "")}" aria-hidden="true"><source src="${esc(small ? S.heroVideoMobile : S.heroVideo)}" type="video/mp4"></video>`;
+    const poster = (portrait && S.heroPhotoMobile) || S.heroPhoto || "";
+    hero.innerHTML = reduce && poster
+      ? `<img src="${esc(poster)}" alt="">`
+      : `<video autoplay muted loop playsinline preload="auto" poster="${esc(poster)}" aria-hidden="true"><source src="${esc(portrait ? S.heroVideoMobile : S.heroVideo)}" type="video/mp4"></video>`;
     const v = hero.querySelector("video"); if (v) { v.muted = true; v.play().catch(() => {}); }
     document.body.classList.add("has-media");
   } else if (S.heroYouTubeId) {
