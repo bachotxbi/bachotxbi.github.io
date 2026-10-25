@@ -199,17 +199,31 @@ window.SITE = {
       ]
     },
     {
-      years: "2020 — 2024", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
+      years: "Sep 2020 — Jun 2024", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
       title: "BSc in Marine Sciences, ULPGC",
-      org: "University of Las Palmas de Gran Canaria · Research internship at ECOAQUA",
+      org: "University of Las Palmas de Gran Canaria · Bachelor's thesis and internship in the BIOCON group, ECOAQUA",
       photo: "",
+      stats: [
+        { label: "Institute", value: "University of Las Palmas de Gran Canaria" },
+        { label: "School", value: "Faculty of Marine Sciences" },
+        { label: "Dean", value: "Dr. María Esther Torres Padrón" },
+        { label: "Thesis supervisor", value: "Dr. Rodrigo Riera" }
+      ],
       details: [
-        "Degree in Marine Sciences at the University of Las Palmas de Gran Canaria.",
-        "In my final year I did a research internship at the ECOAQUA Institute, the start of the work that led to my first paper on the invasive alga *Rugulopteryx okamurae*."
+        "Four-year degree in Marine Sciences at the University of Las Palmas de Gran Canaria, with my third year spent on exchange in Brazil (see #05).",
+        { heading: "Bachelor's thesis", items: [
+          "“How the invasive alga *Rugulopteryx okamurae* affects coastal biodiversity? Insights from coastal fish communities of Gran Canaria (NE Atlantic Ocean)”, supervised by Dr. Rodrigo Riera in the BIOCON group at ECOAQUA.",
+          "The thesis was later published as a scientific article in the *Journal of Sea Research* (2025)."
+        ]},
+        { heading: "Internship", items: [
+          "Research internship in the BIOCON group at ECOAQUA on habitat fragmentation and its impact on coastal biodiversity."
+        ]}
       ],
       links: [
-        { label: "Faculty of Marine Sciences (ULPGC)", url: "https://fcm.ulpgc.es/" },
-        { label: "Paper (Journal of Sea Research)", url: "https://doi.org/10.1016/j.seares.2025.102568" }
+        { label: "BSc in Marine Sciences (ULPGC)", url: "https://www2.ulpgc.es/index.php?pagina=plan_estudio&ver=wpe002&codTitulacion=4006&tipotitulacion=G" },
+        { label: "Published paper", url: "https://doi.org/10.1016/j.seares.2025.102568" },
+        { label: "BIOCON group", url: "https://www.ecoaqua.eu/es/biocon.html" },
+        { label: "ECOAQUA", url: "https://www.ecoaqua.eu/es/" }
       ]
     },
     {
