@@ -8,6 +8,10 @@
 
   // ---- Simple bindings ----
   document.querySelectorAll("[data-bind]").forEach((el) => { el.textContent = S[el.dataset.bind] || ""; });
+  // Subtítulo: cada parte separada por " · " no se parte entre líneas
+  document.querySelectorAll('.tagline[data-bind="tagline"]').forEach((el) => {
+    el.innerHTML = String(S.tagline || "").split(" · ").map((t) => `<span class="tg">${esc(t)}</span>`).join('<span class="tg-sep"> · </span>');
+  });
   document.title = `${S.name || ""} — ${S.tagline || ""}`;
   $("year").textContent = new Date().getFullYear();
 
