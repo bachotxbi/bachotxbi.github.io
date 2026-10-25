@@ -202,7 +202,12 @@ window.SITE = {
       years: "Sep 2020 — Jun 2024", place: "Gran Canaria, Canary Islands", coords: "28.07° N · 15.45° W",
       title: "BSc in Marine Sciences, ULPGC",
       org: "University of Las Palmas de Gran Canaria · Bachelor's thesis and internship in the BIOCON group, ECOAQUA",
-      photo: "",
+      photo: "images/logo-ulpgc-fcm.png", photoType: "logo",
+      panelPhotos: [
+        { src: "images/log-ulpgc-faculty.jpg", caption: "Faculty of Marine Sciences, ULPGC" },
+        { src: "images/log-ulpgc-lab.jpg", caption: "Laboratory practicals" },
+        { src: "images/log-ulpgc-aquaculture.jpg", caption: "Aquaculture facilities" }
+      ],
       stats: [
         { label: "Institute", value: "University of Las Palmas de Gran Canaria" },
         { label: "School", value: "Faculty of Marine Sciences" },
