@@ -177,7 +177,6 @@ window.SITE = {
       panelPhotos: [
         { src: "images/log-ufsc-sun-coral.jpg", caption: "Invasive sun coral (*Tubastraea coccinea*)" },
         { src: "images/log-ufsc-dive-boat.jpg", caption: "Heading out to dive with the sun coral team" },
-        { src: "images/log-ufsc-zodiac.jpg", caption: "Fieldwork around the Arvoredo Marine Biological Reserve" },
         { src: "images/log-ufsc-team.jpg", caption: "The PACS Arvoredo team at UFSC" }
       ],
       stats: [
