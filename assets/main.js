@@ -33,7 +33,7 @@
   $("logbook").innerHTML = log.map((e, i) => `
     <li class="log-entry reveal">
       <div class="log-photo${e.photo ? "" : " empty"}${e.photoType === "logo" ? " logo" : ""}">
-        ${e.photo ? `<img src="${esc(e.photo)}" alt="${esc(e.place)}" loading="lazy">` : ""}
+        ${e.photo ? `<img src="${esc(e.photo)}" alt="${esc(e.place)}" loading="lazy"${e.photoPos ? ` style="object-position:${esc(e.photoPos)}"` : ""}>` : ""}
         <span class="log-no">#${String(i + 1).padStart(2, "0")}</span>
         <span class="log-coords">${esc(e.coords || "")}</span>
       </div>
@@ -91,7 +91,7 @@
     let slides = e.panelPhotos || (e.panelPhoto ? [{ src: e.panelPhoto, caption: e.panelPhotoCaption }] : []);
     if (!slides.length && e.photo && e.photoType !== "logo") slides = [{ src: e.photo }];
     ph.className = "log-sheet-photo" + (slides.length ? " tall" : " empty") + (slides.length > 1 ? " multi" : "");
-    ph.innerHTML = slides.map((sl, k) => `<figure class="slide${k ? "" : " on"}"><img src="${esc(sl.src)}" alt="${esc(sl.caption || "")}">${sl.caption ? `<figcaption class="log-cap">${esc(sl.caption)}</figcaption>` : ""}</figure>`).join("")
+    ph.innerHTML = slides.map((sl, k) => `<figure class="slide${k ? "" : " on"}"><img src="${esc(sl.src)}" alt="${esc(sl.caption || "")}">${sl.caption ? `<figcaption class="log-cap">${rich(sl.caption)}</figcaption>` : ""}</figure>`).join("")
       + `<span class="log-no">#${String(+btn.dataset.i + 1).padStart(2, "0")}</span><span class="log-coords">${esc(e.coords || "")}</span>`
       + (slides.length > 1 ? `<button class="sl-arrow sl-prev" aria-label="Previous photo">‹</button><button class="sl-arrow sl-next" aria-label="Next photo">›</button><div class="sl-dots">${slides.map((_, k) => `<span class="${k ? "" : "on"}"></span>`).join("")}</div>` : "");
     slideStart(ph, slides.length);

@@ -170,16 +170,33 @@ window.SITE = {
       ]
     },
     {
-      years: "2022 — 2023", place: "Florianópolis, Brazil", coords: "27.60° S · 48.52° W",
+      years: "Aug 2022 — Jul 2023", place: "Florianópolis, Brazil", coords: "27.60° S · 48.52° W",
       title: "Exchange year, UFSC",
-      org: "Federal University of Santa Catarina · Research volunteer at the Reef Environments Ecology Lab (LABAR)",
-      photo: "",
+      org: "Third year of my degree in the Oceanography programme · Research volunteer at the Reef Environments Ecology Lab (LABAR)",
+      photo: "images/log-ufsc-oceanografia.jpg", photoPos: "18% 50%",
+      panelPhotos: [
+        { src: "images/log-ufsc-sun-coral.jpg", caption: "Invasive sun coral (*Tubastraea coccinea*)" },
+        { src: "images/log-ufsc-dive-boat.jpg", caption: "Heading out to dive with the sun coral team" },
+        { src: "images/log-ufsc-zodiac.jpg", caption: "Fieldwork around the Arvoredo Marine Biological Reserve" },
+        { src: "images/log-ufsc-team.jpg", caption: "The PACS Arvoredo team at UFSC" }
+      ],
+      stats: [
+        { label: "Institute", value: "Federal University of Santa Catarina (UFSC)" },
+        { label: "Programme", value: "MUNDUS exchange (ULPGC)" },
+        { label: "Research group", value: "LABAR · Reef Environments Ecology Lab" },
+        { label: "Fieldwork", value: "Scuba diving" }
+      ],
       details: [
-        "An academic year at the Federal University of Santa Catarina, in southern Brazil.",
-        "Alongside my courses I volunteered as a researcher at the Reef Environments Ecology Lab (LABAR)."
+        "Almost a full academic year in Florianópolis, in southern Brazil, through the ULPGC's MUNDUS exchange programme. I took the third year of my degree within the UFSC Oceanography programme.",
+        { heading: "Reef ecology at LABAR", items: [
+          "Joined the Reef Environments Ecology Lab, which studies benthic reef communities and biological invasions at macroecological scale.",
+          "Volunteered on the PACS Arvoredo project, an action plan to prevent and control the invasive sun coral *Tubastraea coccinea* in the Arvoredo Marine Biological Reserve and surrounding waters.",
+          "Took part in dives and fieldwork to monitor and remove sun coral, generating knowledge to manage the invasion."
+        ]}
       ],
       links: [
-        { label: "UFSC", url: "https://ufsc.br/" }
+        { label: "Oceanography at UFSC", url: "https://oceano.ufsc.br/" },
+        { label: "LABAR", url: "https://labarufsc.weebly.com/" }
       ]
     },
     {

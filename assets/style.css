@@ -483,3 +483,4 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 .cg-count { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .log-stats > div:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
 .log-stats > div:nth-last-child(2):nth-child(odd) { border-bottom: 1px solid #e3e9e9; }
+.sl-dots { bottom: auto; top: 16px; }
