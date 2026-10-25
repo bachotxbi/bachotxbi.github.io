@@ -13,7 +13,15 @@
 
   // ---- Hero media ----
   const hero = $("heroMedia");
-  if (S.heroYouTubeId) {
+  if (S.heroVideo) {
+    const small = window.matchMedia("(max-width: 900px)").matches && S.heroVideoMobile;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    hero.innerHTML = reduce && S.heroPhoto
+      ? `<img src="${esc(S.heroPhoto)}" alt="">`
+      : `<video autoplay muted loop playsinline preload="auto" poster="${esc(S.heroPhoto || "")}" aria-hidden="true"><source src="${esc(small ? S.heroVideoMobile : S.heroVideo)}" type="video/mp4"></video>`;
+    const v = hero.querySelector("video"); if (v) { v.muted = true; v.play().catch(() => {}); }
+    document.body.classList.add("has-media");
+  } else if (S.heroYouTubeId) {
     const id = encodeURIComponent(S.heroYouTubeId);
     hero.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1&modestbranding=1&rel=0" allow="autoplay; encrypted-media" title="Background video" tabindex="-1"></iframe>`;
     document.body.classList.add("has-media");

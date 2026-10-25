@@ -8,7 +8,9 @@ window.SITE = {
   name: "Xavier Bachot Iglesias",
   tagline: "Marine Ecologist · Underwater Videographer",
   location: "Canary Islands, Spain",
-  heroPhoto: "",            // ej. "images/hero.jpg" (foto submarina horizontal)
+  heroPhoto: "images/hero-poster.jpg",   // se ve mientras carga el vídeo
+  heroVideo: "media/hero-1080.mp4",      // vídeo de fondo (sin sonido, en bucle)
+  heroVideoMobile: "media/hero-720.mp4", // versión ligera para móvil
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
   portrait: "images/portrait.jpg",
 

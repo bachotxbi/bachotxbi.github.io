@@ -84,7 +84,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
   background: radial-gradient(ellipse at 50% -10%, #1f7f8f 0%, #0b4560 35%, var(--deep) 70%, var(--abyss) 100%);
 }
 .hero-media { position: absolute; inset: 0; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.hero-media img, .hero-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-media iframe {
   position: absolute; top: 50%; left: 50%; pointer-events: none;
   width: 177.78vh; height: 56.25vw; min-width: 100%; min-height: 100%;
