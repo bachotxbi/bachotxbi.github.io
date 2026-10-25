@@ -14,14 +14,14 @@ window.SITE = {
 
   about: [
     "I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on Dive Reporter, a monitoring network built with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
-    "I trained in Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) while holding a research fellowship at IMEDEA (CSIC), and then stayed on as a project technician at IMEDEA.",
+    "I came to marine science from engineering, after several years working in industrial design. I then studied Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) with a research fellowship at IMEDEA (CSIC), where I later stayed on as a project technician.",
     "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
   ],
 
   // Datos rápidos bajo la presentación
   facts: [
     { label: "Based in", value: "Canary Islands, Spain" },
-    { label: "Diving", value: "SSI Divemaster" },
+    { label: "Diving", value: "SSI Divemaster · Scientific diver (UIB)" },
     { label: "Languages", value: "Spanish · Catalan · English · Portuguese" }
   ],
 
@@ -233,12 +233,25 @@ window.SITE = {
       ]
     },
     {
-      years: "2021", place: "Gran Canaria, Canary Islands", coords: "28.10° N · 15.42° W",
-      title: "SSI Divemaster, Karapat Dive",
-      org: "Divemaster internship · Gran Canaria",
+      years: "Until 2020", place: "Sabadell, Catalonia", coords: "41.55° N · 2.11° E",
+      title: "Before the sea: industrial design",
+      org: "Two higher vocational degrees in mechanical manufacturing · Senior industrial designer at Talleres Moldesa",
       photo: "",
+      stats: [
+        { label: "Field", value: "Mechanical manufacturing" },
+        { label: "Role", value: "Senior industrial designer" },
+        { label: "Company", value: "Talleres Moldesa S.L." },
+        { label: "Years", value: "2016 — 2020" }
+      ],
       details: [
-        "Professional diving certification with SSI, earned through a divemaster internship at Karapat Dive in Gran Canaria: guiding dives, assisting instructors and dive planning."
+        "Before marine science, I trained and worked in engineering. That background still shapes how I work today: programming, modelling, technical problem-solving and a careful eye for data.",
+        { heading: "Training", items: [
+          "Higher vocational degree in Mechanical Manufacturing Design.",
+          "Higher vocational degree in Production Planning for Mechanical Manufacturing."
+        ]},
+        { heading: "Work", items: [
+          "Four years as a senior industrial designer at Talleres Moldesa, in Sabadell, before leaving to study Marine Sciences in Gran Canaria."
+        ]}
       ],
       links: []
     }
