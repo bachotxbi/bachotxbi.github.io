@@ -10,7 +10,7 @@ window.SITE = {
   location: "Canary Islands, Spain",
   heroPhoto: "",            // ej. "images/hero.jpg" (foto submarina horizontal)
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
-  portrait: "",             // ej. "images/me.jpg" (foto tuya, cuadrada)
+  portrait: "images/portrait.jpg",
 
   about: [
     "I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on Dive Reporter, a monitoring network built with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
