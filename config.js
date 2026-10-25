@@ -13,10 +13,9 @@ window.SITE = {
   portrait: "images/portrait.jpg",
 
   about: [
-    "I grew up in **Barcelona** as the kid who turned over every rock to see what was living underneath. Science was always my subject, and Biology was the plan, but my grades didn't quite get me there. So I took the practical route: I trained in [**mechanical engineering**](#log-7) and spent several years designing industrial parts.",
-    "The sea kept pulling, though, and when I went back to university one theme kept finding me: **invasive species**. I studied the alga *Rugulopteryx okamurae* and its effect on coastal fish during my [Marine Sciences degree in Gran Canaria](#log-6), worked on the invasive sun coral *Tubastraea coccinea* during [a year in Brazil](#log-5), and in Mallorca, between [my MSc in Marine Ecology](#log-4) and [IMEDEA (CSIC)](#log-2), on the crab *Percnon gibbesi* and the green alga *Batophora*.",
-    "Today I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on the [**Dive Reporter**](#log-1) project, building a monitoring network with dive centres across Macaronesia to track how coastal ecosystems are changing.",
-    "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface."
+    "I'm a **marine ecologist** from Barcelona, currently working as project technician on [**Dive Reporter**](#log-1) at the ECOAQUA Institute, University of Las Palmas de Gran Canaria.",
+    "I came to the sea from [**engineering**](#log-7). After several years in industrial design, I studied Marine Sciences in Gran Canaria, spent a year in Brazil, and completed an MSc in Marine Ecology in Mallorca.",
+    "Underwater I'm a Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface."
   ],
 
   // Datos rápidos bajo la presentación
