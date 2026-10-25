@@ -236,7 +236,8 @@ window.SITE = {
       years: "Until 2020", place: "Sabadell, Catalonia", coords: "41.55° N · 2.11° E",
       title: "Before the sea: industrial design",
       org: "Higher Technician in mechanical manufacturing (two qualifications) · Senior industrial designer at Talleres Moldesa",
-      photo: "",
+      photo: "images/log-before-the-sea.jpg",
+      panelPhotos: [ { src: "images/log-before-the-sea.jpg" } ],
       stats: [
         { label: "School", value: "Escola Industrial de Sabadell" },
         { label: "Internships", value: "ALBA Synchrotron and Talleres Moldesa" },
