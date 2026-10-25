@@ -235,7 +235,7 @@ window.SITE = {
     {
       years: "Until 2020", place: "Sabadell, Catalonia", coords: "41.55° N · 2.11° E",
       title: "Before the sea: industrial design",
-      org: "Two higher vocational degrees in mechanical manufacturing · Senior industrial designer at Talleres Moldesa",
+      org: "Higher Technician in mechanical manufacturing (two qualifications) · Senior industrial designer at Talleres Moldesa",
       photo: "",
       stats: [
         { label: "Field", value: "Mechanical manufacturing" },
@@ -246,8 +246,8 @@ window.SITE = {
       details: [
         "Before marine science, I trained and worked in engineering. That background still shapes how I work today: programming, modelling, technical problem-solving and a careful eye for data.",
         { heading: "Training", items: [
-          "Higher vocational degree in Mechanical Manufacturing Design.",
-          "Higher vocational degree in Production Planning for Mechanical Manufacturing."
+          "Higher Technician in Mechanical Manufacturing Design (Técnico Superior).",
+          "Higher Technician in Production Planning for Mechanical Manufacturing (Técnico Superior)."
         ]},
         { heading: "Work", items: [
           "Four years as a senior industrial designer at Talleres Moldesa, in Sabadell, before leaving to study Marine Sciences in Gran Canaria."
