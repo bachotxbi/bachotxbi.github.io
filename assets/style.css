@@ -504,3 +504,7 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
   }
 }
 .tagline .tg { white-space: nowrap; }
+@media (max-width: 600px) {
+  .tagline .tg-sep { display: none; }
+  .tagline .tg { display: block; line-height: 1.5; }
+}
