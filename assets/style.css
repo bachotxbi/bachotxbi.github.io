@@ -491,3 +491,15 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
   font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 300; font-size: 1.5rem; line-height: 1.45;
   color: var(--mid); margin-top: 1.6rem; padding-left: 18px; border-left: 3px solid var(--accent);
 }
+
+/* ---------- Hero: text on the right, smaller name ---------- */
+.hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+@media (min-width: 900px) {
+  .hero-content { text-align: right; display: flex; flex-direction: column; align-items: flex-end; padding-right: 48px; max-width: none; }
+  .hero-actions { justify-content: flex-end; }
+  .has-media .hero-media::after {
+    background:
+      linear-gradient(270deg, rgba(4,20,31,.55) 0%, rgba(4,20,31,.25) 38%, rgba(4,20,31,0) 65%),
+      linear-gradient(180deg, rgba(4,20,31,.2) 0%, rgba(4,20,31,.05) 45%, rgba(4,20,31,.6) 100%);
+  }
+}
