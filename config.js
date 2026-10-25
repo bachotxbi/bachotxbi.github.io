@@ -254,8 +254,8 @@ window.SITE = {
         ]}
       ],
       links: [
-        { label: "Higher Technician in Mechanical Manufacturing Design", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-2/" },
-        { label: "Higher Technician in Production Planning", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-3/" },
+        { label: "Mechanical Manufacturing Design", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-2/" },
+        { label: "Production Planning", url: "https://www.escolaindustrial.org/estudis/metall/metall-2-3/" },
         { label: "ALBA Synchrotron", url: "https://www.cells.es/es" }
       ]
     }
