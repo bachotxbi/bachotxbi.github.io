@@ -6,7 +6,7 @@
 window.SITE = {
   // --- Identidad -------------------------------------------------------
   name: "Xavier Bachot Iglesias",
-  tagline: "Marine Ecologist · Underwater Videographer",
+  tagline: "Marine ecology, underwater fieldwork and science communication",
   location: "Canary Islands, Spain",
   heroPhoto: "images/hero-poster.jpg",   // se ve mientras carga el vídeo
   heroVideo: "media/hero-1080.mp4?q=202610251804",      // vídeo de fondo (sin sonido, en bucle)
