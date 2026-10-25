@@ -13,8 +13,8 @@ window.SITE = {
   portrait: "images/portrait.jpg",
 
   about: [
-    "I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on **Dive Reporter**, a monitoring network built with dive centres across Macaronesia. I'm interested in how **coastal ecosystems** are structured, how they change, and how they respond to pressures such as invasive species and pollution.",
-    "I came to the sea from **engineering**. After several years in industrial design, I studied Marine Sciences in Gran Canaria, spent a year working on reef ecology in Brazil, and completed an MSc in Marine Ecology in Mallorca, where I also worked at IMEDEA (CSIC).",
+    "I'm a [**marine ecologist**](#log-4) in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on [**Dive Reporter**](#log-1), a monitoring network built with dive centres across Macaronesia. I'm interested in how **coastal ecosystems** are structured, how they change, and how they respond to pressures such as invasive species and pollution.",
+    "I came to the sea from [**engineering**](#log-7). After several years in industrial design, I studied [Marine Sciences in Gran Canaria](#log-6), spent [a year working on reef ecology in Brazil](#log-5), and completed [an MSc in Marine Ecology in Mallorca](#log-4), where I also worked at [IMEDEA (CSIC)](#log-2).",
     "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface."
   ],
 

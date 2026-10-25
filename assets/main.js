@@ -60,6 +60,16 @@
   window.addEventListener("resize", railState);
   setTimeout(railState, 50);
 
+  // Enlaces #log-N en los textos: abren el "Read more" de esa entrada
+  document.addEventListener("click", (ev) => {
+    const a = ev.target.closest('a[href^="#log-"]'); if (!a) return;
+    ev.preventDefault();
+    const n = parseInt(a.getAttribute("href").slice(5), 10) - 1;
+    const btn = document.querySelector(`.log-more[data-i="${n}"]`); if (!btn) return;
+    btn.closest(".log-entry").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    btn.click();
+  });
+
   // Panel de detalle de la bitácora
   const lp = document.createElement("div");
   lp.className = "log-panel";
