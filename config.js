@@ -16,7 +16,7 @@ window.SITE = {
     "I came to the sea from [**engineering**](#log-7). After several years in industrial design, I studied [Marine Sciences in Gran Canaria](#log-6), spent [a year working on reef ecology in Brazil](#log-5), and completed [an MSc in Marine Ecology in Mallorca](#log-4), where I also worked at [IMEDEA (CSIC)](#log-2).",
     "Today I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on [**Dive Reporter**](#log-1), a monitoring network built with dive centres across Macaronesia to follow how **coastal ecosystems** change and respond to pressures such as invasive species.",
     "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface.",
-    "~As a kid in Barcelona I turned over every rock to see what lived underneath. I still do, just a few metres deeper.~"
+    "~As a kid in Barcelona I turned over every rock to see what lived underneath.|I still do, just a few metres deeper.~"
   ],
 
   // Datos rápidos bajo la presentación
@@ -140,11 +140,11 @@ window.SITE = {
       org: "University of the Balearic Islands · Master's thesis and internship at IMEDEA (CSIC-UIB)",
       photo: "images/logo-mecm.png", photoType: "logo",
       panelPhotos: [
+        { src: "images/log-msc-dive-team.jpg", caption: "Back at the surface after a scientific dive" },
         { src: "images/log-msc-quadrat.jpg", caption: "Quadrat survey during the scientific diving course" },
         { src: "images/log-msc-boat-menorca.jpg", caption: "Water sampling from the boat, Menorca" },
         { src: "images/log-msc-team-menorca.jpg", caption: "Field trip team, Menorca" },
-        { src: "images/log-msc-snorkel.jpg", caption: "Snorkel survey practice" },
-        { src: "images/log-msc-dive-team.jpg", caption: "Back at the surface after a scientific dive" }
+        { src: "images/log-msc-snorkel.jpg", caption: "Snorkel survey practice" }
       ],
       stats: [
         { label: "Institute", value: "University of the Balearic Islands" },
@@ -176,9 +176,9 @@ window.SITE = {
       org: "Third year of my degree in the Oceanography programme · Research volunteer at the Reef Environments Ecology Lab (LABAR)",
       photo: "images/log-ufsc-oceanografia.jpg", photoPos: "18% 50%",
       panelPhotos: [
+        { src: "images/log-ufsc-team.jpg", caption: "The PACS Arvoredo team at UFSC" },
         { src: "images/log-ufsc-sun-coral.jpg", caption: "Invasive sun coral (*Tubastraea coccinea*)" },
-        { src: "images/log-ufsc-dive-boat.jpg", caption: "Heading out to dive with the sun coral team" },
-        { src: "images/log-ufsc-team.jpg", caption: "The PACS Arvoredo team at UFSC" }
+        { src: "images/log-ufsc-dive-boat.jpg", caption: "Heading out to dive with the sun coral team" }
       ],
       stats: [
         { label: "Institute", value: "Federal University of Santa Catarina (UFSC)" },
@@ -271,7 +271,7 @@ window.SITE = {
   orcid: "0009-0006-6342-0274",
   // Publicaciones a mano (se usan si no hay ORCID o como complemento):
   publications: [
-    // { year: 2025, title: "Title of the paper", authors: "Surname A, Surname B", journal: "Journal", doi: "10.xxxx/xxxxx" },
+    // { year: 2025, title: "Title of the paper", authors: "Surname A, Surname B", journal: "Journal", doi: "10.xxxx/xxxxx" }
   ],
 
   // --- Science communication · Mar Educado -----------------------------
@@ -291,7 +291,7 @@ window.SITE = {
   youtubeHandle: "@mar_educado",
   // Vídeos destacados (opcional): IDs de YouTube que quieras mostrar grandes.
   featuredVideos: [
-    // { id: "xxxxxxxxxxx", title: "Title", note: "Finalist — Festival X 2024" },
+    // { id: "xxxxxxxxxxx", title: "Title", note: "Finalist — Festival X 2024" }
   ],
 
   // --- Concursos y reconocimientos --------------------------------------

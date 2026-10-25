@@ -26,7 +26,7 @@
   $("portrait").innerHTML = S.portrait
     ? `<img src="${esc(S.portrait)}" alt="${esc(S.name)}">`
     : esc((S.name || "?").split(" ").map((w) => w[0]).join("").slice(0, 2));
-  $("aboutText").innerHTML = (S.about || []).map((p) => /^~.*~$/.test(p) ? `<p class="signoff">${rich(p.slice(1, -1))}</p>` : `<p>${rich(p)}</p>`).join("");
+  $("aboutText").innerHTML = (S.about || []).map((p) => /^~.*~$/.test(p) ? `<p class="signoff">${rich(p.slice(1, -1)).replace("|", "<br>")}</p>` : `<p>${rich(p)}</p>`).join("");
   $("facts").innerHTML = (S.facts || []).map((f) => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("");
   const log = S.logbook || [];
   if (!log.length) $("logbookWrap").style.display = "none";
