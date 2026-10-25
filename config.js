@@ -13,9 +13,9 @@ window.SITE = {
   portrait: "images/portrait.jpg",
 
   about: [
-    "I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on Dive Reporter, a monitoring network built with dive centres across Macaronesia. I study coastal ecosystems: how they are structured, how they change, and what happens to them under pressures such as invasive species.",
-    "I came to marine science from engineering, after several years working in industrial design. I then studied Marine Sciences at the ULPGC, spent a year in Brazil working on reef ecology, and completed an MSc in Marine Ecology at the University of the Balearic Islands (UIB) with a research fellowship at IMEDEA (CSIC), where I later stayed on as a project technician.",
-    "Underwater I'm a certified SSI Divemaster, and I rarely go in without a camera. Through Mar Educado I share what I find below the surface."
+    "I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on **Dive Reporter**, a monitoring network built with dive centres across Macaronesia. I'm interested in how **coastal ecosystems** are structured, how they change, and how they respond to pressures such as invasive species and pollution.",
+    "I came to the sea from **engineering**. After several years in industrial design, I studied Marine Sciences in Gran Canaria, spent a year working on reef ecology in Brazil, and completed an MSc in Marine Ecology in Mallorca, where I also worked at IMEDEA (CSIC).",
+    "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through **Mar Educado** I share what I find below the surface."
   ],
 
   // Datos rápidos bajo la presentación
