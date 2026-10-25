@@ -9,7 +9,7 @@ window.SITE = {
   tagline: "Marine Ecologist · Underwater Videographer",
   location: "Canary Islands, Spain",
   heroPhoto: "images/hero-poster.jpg",   // se ve mientras carga el vídeo
-  heroVideo: "media/hero-1080.mp4?q=202610251752",      // vídeo de fondo (sin sonido, en bucle)
+  heroVideo: "media/hero-1080.mp4?q=202610251804",      // vídeo de fondo (sin sonido, en bucle)
   heroVideoMobile: "media/hero-vertical.mp4",        // vídeo vertical para pantallas en vertical (móvil)
   heroPhotoMobile: "images/hero-poster-vertical.jpg",
   heroYouTubeId: "",        // ej. "dQw4w9WgXcQ" → vídeo de fondo en la portada (sin sonido, en bucle)
