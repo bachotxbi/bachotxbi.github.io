@@ -206,7 +206,8 @@ window.SITE = {
       panelPhotos: [
         { src: "images/log-ulpgc-faculty.jpg", caption: "Faculty of Marine Sciences, ULPGC" },
         { src: "images/log-ulpgc-lab.jpg", caption: "Laboratory practicals" },
-        { src: "images/log-ulpgc-aquaculture.jpg", caption: "Aquaculture facilities" }
+        { src: "images/log-ulpgc-aquaculture.jpg", caption: "Aquaculture facilities" },
+        { src: "images/log-ulpgc-microalgae.jpg", caption: "Microalgae culture photobioreactors" }
       ],
       stats: [
         { label: "Institute", value: "University of Las Palmas de Gran Canaria" },
