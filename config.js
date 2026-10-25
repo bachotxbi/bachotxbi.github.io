@@ -13,9 +13,9 @@ window.SITE = {
   portrait: "images/portrait.jpg",
 
   about: [
-    "I was born in a small town near **Barcelona**, and nature has always been my favourite place to be. But I came to the sea the long way round, from [**engineering**](#log-7). After several years in industrial design, I studied Marine Sciences in Gran Canaria, spent [an exchange year in Brazil volunteering in a reef ecology lab](#log-5), and completed an MSc in Marine Ecology in Mallorca, where I also worked at [IMEDEA (CSIC)](#log-2).",
-    "Today I'm a **marine ecologist** in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on [**Dive Reporter**](#log-1), a monitoring network built with dive centres across Macaronesia to follow how **coastal ecosystems** change and respond to pressures such as invasive species.",
-    "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [@mar_educado](#scicomm) I share what I find below the surface.",
+    "I was born in a small town near Barcelona, and nature has always been my favourite place to be. But I came to the sea the long way round, from [**engineering**](#log-7). After several years in industrial design, I studied Marine Sciences in Gran Canaria, spent [**an exchange year in Brazil volunteering in a reef ecology lab**](#log-5), and completed an MSc in Marine Ecology in Mallorca, where I also worked at [**IMEDEA (CSIC)**](#log-2).",
+    "Today I'm a marine ecologist in the BIOCON group at the ECOAQUA Institute (University of Las Palmas de Gran Canaria), where I work as project technician on [**Dive Reporter**](#log-1), a monitoring network built with dive centres across Macaronesia to follow how coastal ecosystems change and respond to pressures such as invasive species.",
+    "Underwater I'm an SSI Divemaster and scientific diver, and I rarely go in without a camera. Through [**@mar_educado**](#scicomm) I share what I find below the surface.",
     "~As a kid I turned over every rock to see what lived underneath.|I still do, just a few metres deeper.~"
   ],
 
