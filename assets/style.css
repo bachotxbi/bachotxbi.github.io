@@ -520,3 +520,10 @@ h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 2rem; }
 @media (max-width: 760px) {
   .nav-icons-left { display: none; }
 }
+.nav-links a { white-space: nowrap; }
+@media (min-width: 1200px) {
+  .nav-links { gap: 32px; }
+  .nav-links a { font-size: 1.02rem; }
+  .nav-icons { gap: 18px; }
+  .nav-icons a { width: 24px; height: 24px; }
+}
