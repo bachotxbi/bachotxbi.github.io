@@ -295,7 +295,9 @@
   const linkList = Object.entries(L).filter(([, u]) => u);
   if (S.email) linkList.push(["email", `mailto:${S.email}`]);
   const iconLink = ([k, u]) => `<li><a href="${esc(u)}" ${k === "email" ? "" : 'target="_blank" rel="noopener"'} title="${labels[k] || esc(k)}" aria-label="${labels[k] || esc(k)}">${ICONS[k] || esc(labels[k] || k)}</a></li>`;
-  $("navIcons").innerHTML = linkList.map(iconLink).join("");
+  // Barra superior: perfiles académicos a la izquierda, redes a la derecha
+  $("navIconsLeft").innerHTML = linkList.filter(([k]) => RESEARCH_KEYS.includes(k)).map(iconLink).join("");
+  $("navIcons").innerHTML = linkList.filter(([k]) => !RESEARCH_KEYS.includes(k)).map(iconLink).join("");
   const pill = ([k, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><span class="ico">${ICONS[k] || ""}</span>${labels[k] || esc(k)}</a></li>`;
   const pillsFor = (keys) => keys.filter((k) => L[k]).map((k) => pill([k, L[k]])).join("");
   $("social").innerHTML = linkList.filter(([k]) => k !== "email").map(pill).join("");
